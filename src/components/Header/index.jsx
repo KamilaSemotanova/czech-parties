@@ -19,18 +19,18 @@ export const Header = () => {
 
   return (
     <header className="header">
-      <h1>logo czech parties</h1>
+      <div className="header__logo"></div>
       <div className="menu__phone">
-        <button onClick={handleMenuToggle}>
+        <button className="menu__phone-btn" onClick={handleMenuToggle}>
           {menuOpen ? (
             <img
-              className="menu__phone--togle"
+              className="menu__phone-btn--togle"
               src={require('./img/burgermenu-opened.svg')}
               alt="menu-opened"
             />
           ) : (
             <img
-              className="menu__phone--togle"
+              className="menu__phone-btn--togle"
               src={require('./img/burgermenu-closed.svg')}
               alt="menu-closed"
             />
@@ -48,7 +48,7 @@ export const Header = () => {
         )}
       </div>
       <div className="menu__pc">
-        <ul>
+        <ul className="menu__list">
           <li className="menu__item">Akce</li>
           <li className="menu__item">Galerie</li>
           <li className="menu__item">O nás</li>

@@ -1,6 +1,7 @@
 .footer {
   display: flex;
   height: 133px;
+  width: 100vw;
   padding: 20px 16px;
   flex-direction: column;
   justify-content: space-between;
@@ -8,6 +9,9 @@
   flex-shrink: 0;
   align-self: stretch;
   background: #740DF9;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
 .footer__links {
