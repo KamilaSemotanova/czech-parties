@@ -1,5 +1,6 @@
 .sponsors {
   display: flex;
+  width: 100vw;
   padding: 60px 100px 40px 100px;
   flex-direction: column;
   justify-content: center;
@@ -20,7 +21,6 @@
 
 .sponsors__logo {
   display: flex;
-  width: 1175px;
   justify-content: space-between;
   align-items: center;
 }
