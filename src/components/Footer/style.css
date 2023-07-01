@@ -9,9 +9,6 @@
   flex-shrink: 0;
   align-self: stretch;
   background: #740DF9;
-  position: fixed;
-  bottom: 0;
-  left: 0;
 }
 
 .footer__links {

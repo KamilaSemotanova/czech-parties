@@ -9,12 +9,12 @@ export const Sponsors = () => {
         <img
           src={require('./img/logo-bigshock-transparent 1.png')}
           alt="bigshock-logo"
-          className="sponsor__logo"
+          className="sponsor1__logo"
         />
         <img
           src={require('./img/Lost mary czech - Logotype_black 1.png')}
           alt="lostmary-logo"
-          className="sponsor__logo"
+          className="sponsor2__logo"
         />
       </div>
     </section>
