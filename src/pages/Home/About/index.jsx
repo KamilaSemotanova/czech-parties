@@ -3,7 +3,7 @@ import './style.css';
 
 export const About = () => {
   return (
-    <section className="about">
+    <section className="about" id="o-nas">
       <h2 className="about__title">O nás</h2>
       <p className="about__text">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus

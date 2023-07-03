@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './style.css';
+import { BrowserRouter } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,43 +20,63 @@ export const Header = () => {
   };
 
   return (
-    <header className="header">
-      <div className="header__logo"></div>
-      <div className="menu__phone">
-        <button className="menu__phone-btn" onClick={handleMenuToggle}>
-          {menuOpen ? (
-            <img
-              className="menu__phone-btn--togle"
-              src={require('./img/burgermenu-opened.svg')}
-              alt="menu-opened"
-            />
-          ) : (
-            <img
-              className="menu__phone-btn--togle"
-              src={require('./img/burgermenu-closed.svg')}
-              alt="menu-closed"
-            />
+    <BrowserRouter>
+      <header className="header">
+        <Link to="">
+          <div className="header__logo"></div>
+        </Link>
+        <div className="menu__phone">
+          <button className="menu__phone-btn" onClick={handleMenuToggle}>
+            {menuOpen ? (
+              <img
+                className="menu__phone-btn--togle"
+                src={require('./img/burgermenu-opened.svg')}
+                alt="menu-opened"
+              />
+            ) : (
+              <img
+                className="menu__phone-btn--togle"
+                src={require('./img/burgermenu-closed.svg')}
+                alt="menu-closed"
+              />
+            )}
+          </button>
+          {menuOpen && (
+            <div className="menu__phone-hamburger">
+              <ul className="menu__list">
+                <li className="menu__item">
+                  <Link to="#akce">Akce</Link>
+                </li>
+                <li className="menu__item">
+                  <Link to="#galerie">Galerie</Link>
+                </li>
+                <li className="menu__item">
+                  <Link to="#o-nas">O nás</Link>
+                </li>
+                <li className="menu__item">
+                  <Link to="#kontakt">Kontakt</Link>
+                </li>
+              </ul>
+            </div>
           )}
-        </button>
-        {menuOpen && (
-          <div className="menu__phone-hamburger">
-            <ul className="menu__list">
-              <li className="menu__item">Akce</li>
-              <li className="menu__item">Galerie</li>
-              <li className="menu__item">O nás</li>
-              <li className="menu__item">Kontakt</li>
-            </ul>
-          </div>
-        )}
-      </div>
-      <div className="menu__pc">
-        <ul className="menu__list">
-          <li className="menu__item">Akce</li>
-          <li className="menu__item">Galerie</li>
-          <li className="menu__item">O nás</li>
-          <li className="menu__item">Kontakt</li>
-        </ul>
-      </div>
-    </header>
+        </div>
+        <div className="menu__pc">
+          <ul className="menu__list">
+            <li className="menu__item">
+              <Link to="#akce">Akce</Link>
+            </li>
+            <li className="menu__item">
+              <Link to="#galerie">Galerie</Link>
+            </li>
+            <li className="menu__item">
+              <Link to="#o-nas">O nás</Link>
+            </li>
+            <li className="menu__item">
+              <Link to="#kontakt">Kontakt</Link>
+            </li>
+          </ul>
+        </div>
+      </header>
+    </BrowserRouter>
   );
 };

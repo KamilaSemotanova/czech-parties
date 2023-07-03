@@ -3,7 +3,7 @@ import './style.css';
 
 export const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" id="kontakt">
       <div className="footer__links">
         <a href="https://www.facebook.com/czechparties/">
           <img
