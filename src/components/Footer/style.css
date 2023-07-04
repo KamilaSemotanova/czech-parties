@@ -32,6 +32,11 @@
   line-height: normal;
 }
 
+.footer__contact-email:hover,
+.footer__contact-email:focus {
+  color: rgb(169, 169, 169);
+}
+
 .footer__links-logo {
   width: 28px;
   height: 28px;

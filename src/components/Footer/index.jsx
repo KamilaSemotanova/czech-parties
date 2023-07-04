@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './style.css';
 
 export const Footer = () => {
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:podpora@czechparties.cz';
+  };
+
   return (
     <footer className="footer" id="kontakt">
       <div className="footer__links">
@@ -31,7 +35,13 @@ export const Footer = () => {
         <p>
           Czech Parties
           <br />
-          podpora@czechparties.cz
+          <span
+            onClick={handleEmailClick}
+            className="footer__contact-email"
+            style={{ cursor: 'pointer' }}
+          >
+            podpora@czechparties.cz
+          </span>
         </p>
       </div>
     </footer>
