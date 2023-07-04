@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './style.css';
 import { LoadEvents } from '../../../functions/db';
 
-export const Events = () => {
+export const Events = ({ onSelectEvent }) => {
   const [events, setEvents] = useState(null);
 
   useEffect(() => {
@@ -19,9 +19,7 @@ export const Events = () => {
               <button
                 className="event"
                 onClick={() => {
-                  // navigate(`/event/${event.id}`);
-
-                  console.log('ahoj');
+                  onSelectEvent(event.id);
                 }}
                 key={event.id}
               >

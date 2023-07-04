@@ -19,10 +19,16 @@ export const Header = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const handleReload = (event) => {
+    event.preventDefault();
+
+    window.location.reload();
+  };
+
   return (
     <BrowserRouter>
       <header className="header">
-        <Link to="">
+        <Link to="/" onClick={handleReload}>
           <div className="header__logo"></div>
         </Link>
         <div className="menu__phone">

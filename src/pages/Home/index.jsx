@@ -12,14 +12,20 @@ export const HomePage = () => {
   const [openDetail, setOpenDetail] = useState(false);
   const [id, setId] = useState();
 
+  const handleSelectedEvent = (id) => {
+    console.log(id);
+    setOpenDetail(true);
+    setId(id);
+  };
+
   return (
     <>
       {openDetail ? (
-        <Detail />
+        <Detail id={id} />
       ) : (
         <>
           <ImageSlider />
-          <Events />
+          <Events onSelectEvent={handleSelectedEvent} />
           <Gallery />
           <Cooperation />
           <About />
