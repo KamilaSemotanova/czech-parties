@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './style.css';
-import { BrowserRouter } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 
 export const Header = () => {
@@ -20,7 +19,6 @@ export const Header = () => {
   };
 
   return (
-    // <BrowserRouter>
     <header className="header">
       <div className="header__main">
         <Link to="">
@@ -103,6 +101,5 @@ export const Header = () => {
         </div>
       )}
     </header>
-    // </BrowserRouter>
   );
 };
