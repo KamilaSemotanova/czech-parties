@@ -54,6 +54,9 @@ export const Header = () => {
                 <Link to="#o-nas">O nás</Link>
               </li>
               <li className="menu__item">
+                <Link to="#aftermovies">Aftermovies</Link>
+              </li>
+              <li className="menu__item">
                 <Link to="#kontakt">Kontakt</Link>
               </li>
             </ul>
@@ -70,6 +73,9 @@ export const Header = () => {
           </li>
           <li className="menu__item">
             <Link to="#o-nas">O nás</Link>
+          </li>
+          <li className="menu__item">
+            <Link to="#aftermovies">Aftermovies</Link>
           </li>
           <li className="menu__item">
             <Link to="#kontakt">Kontakt</Link>
