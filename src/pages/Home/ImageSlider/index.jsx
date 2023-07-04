@@ -6,13 +6,20 @@ export const ImageSlider = () => {
 
   const images = [
     {
-      src: require('./img/img_1.jpeg'),
-      text: 'Vítejte v Czechparties– organizaci, která se specializuje na nezapomenutelné párty pro studenty středních a vysokých škol! Jsme tady, abychom přinesli do vašeho studentského života dávku vzrušení, radosti a neomezené zábavy.',
+      src: require('./img/img_1.png'),
+      text: 'Vítejte v Czechparties',
+      more: 'organizaci, která se specializuje na nezapomenutelné párty pro studenty středních a vysokých škol!',
+      class: 'first',
     },
-    { src: require('./img/img_2.jpeg'), text: 'WE ARE THE NEW GENERATION' },
     {
-      src: require('./img/img_3.jpg'),
+      src: require('./img/img_2.png'),
+      text: 'We are the new generation',
+      class: 'second',
+    },
+    {
+      src: require('./img/img_3.png'),
       text: 'Katalyzátor nekonečné zábavy pro studentskou scénu!',
+      class: 'third',
     },
   ];
 
@@ -25,7 +32,7 @@ export const ImageSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextImage();
-    }, 3000);
+    }, 8000);
 
     return () => {
       clearInterval(interval);
@@ -39,7 +46,14 @@ export const ImageSlider = () => {
         className="slider__image"
         alt="Slider"
       />
-      <p className="slider__text">{images[currentImage].text}</p>
+      <p className={`slider__text ${images[currentImage].class}`}>
+        {images[currentImage].text}
+      </p>
+      {images[currentImage].more ? (
+        <p className={`slider__text-more ${images[currentImage].class}`}>
+          {images[currentImage].more}
+        </p>
+      ) : null}
     </div>
   );
 };
