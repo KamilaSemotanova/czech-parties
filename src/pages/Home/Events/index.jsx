@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
 import { LoadEvents } from '../../../functions/db';
+import { Link } from 'react-router-dom';
 
-export const Events = ({ onSelectEvent }) => {
+export const Events = () => {
   const [events, setEvents] = useState(null);
 
   useEffect(() => {
@@ -16,16 +17,12 @@ export const Events = ({ onSelectEvent }) => {
           <h2 className="events__title">Kalendář akcí</h2>
           <div className="events__box">
             {events.map((event) => (
-              <button
-                className="event"
-                onClick={() => {
-                  onSelectEvent(event.id);
-                }}
-                key={event.id}
-              >
-                <h3 className="event__city">{event.city_event}</h3>
-                <p className="event__date">{event.date_of_event}</p>
-              </button>
+              <Link to={`event/${event.id}`} key={event.id}>
+                <button className="event">
+                  <h3 className="event__city">{event.city_event}</h3>
+                  <p className="event__date">{event.date_of_event}</p>
+                </button>
+              </Link>
             ))}
           </div>
         </>

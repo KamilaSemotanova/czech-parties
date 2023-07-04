@@ -8,8 +8,7 @@ export async function LoadEvents() {
   return data;
 }
 
-// export const getEventById = (id) => {
-//   const supabase = getSupabase();
-
-//   return supabase.from('Events').select('*').eq('id', id).single();
-// };
+export async function LoadEventById(id) {
+  const { data } = await supabase.from('Events').select().eq('id', id).single();
+  return data;
+}
