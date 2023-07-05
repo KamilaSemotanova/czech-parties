@@ -55,4 +55,13 @@
     font-size: 56px;
     margin-bottom: 2rem;
   }
+
+  .sponsor1__logo {
+    height: 172px;
+    ;
+  }
+
+  .sponsor2__logo {
+    height: 86px;
+  }
 }
