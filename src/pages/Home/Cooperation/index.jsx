@@ -32,11 +32,7 @@ export const Cooperation = () => {
       <h2 className="cooperation__title">Spolupracujeme s</h2>
       <div className="cooperation__box">
         <button className="cooperation__arrow prev" onClick={prevSlide}>
-          <img
-            src={require('./img/previous.svg')}
-            alt="previous image"
-            className="arrow"
-          />
+          <div alt="previous image" className="arrow"></div>
         </button>
         <div className="cooperation__container">
           {images.slice(currentIndex, currentIndex + 4).map((image, index) => (
@@ -49,11 +45,7 @@ export const Cooperation = () => {
           ))}
         </div>
         <button className="cooperation__arrow next" onClick={nextSlide}>
-          <img
-            src={require('./img/next.svg')}
-            alt="next image"
-            className="arrow"
-          />
+          <div alt="next image" className="arrow"></div>
         </button>
       </div>
     </section>
