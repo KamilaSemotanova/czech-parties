@@ -10,25 +10,13 @@ export const Footer = () => {
     <footer className="footer" id="kontakt">
       <div className="footer__links">
         <a href="https://www.facebook.com/czechparties/">
-          <img
-            src={require('./img/Fb.svg')}
-            alt="facebook-link"
-            className="footer__links-logo"
-          />
+          <div className="footer__links-logo facebook"></div>
         </a>
-        <a href="https://www.facebook.com/czechparties/">
-          <img
-            src={require('./img/Ig.svg')}
-            alt="instagram-link"
-            className="footer__links-logo"
-          />
+        <a href="https://www.instagram.com/czechparties.cz/?hl=en">
+          <div className="footer__links-logo insta"></div>
         </a>
         <a href="https://www.tiktok.com/discover/Czech-parties">
-          <img
-            src={require('./img/TikTok.svg')}
-            alt="tiktok-link"
-            className="footer__links-logo"
-          />
+          <div className="footer__links-logo tiktok"></div>
         </a>
       </div>
       <div className="footer__contact">

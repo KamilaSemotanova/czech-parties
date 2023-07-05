@@ -41,3 +41,57 @@
   width: 28px;
   height: 28px;
 }
+
+.tiktok {
+  background: url("./img/TikTok.svg");
+  background-size: cover;
+}
+
+.insta {
+  background: url("./img/Ig.svg"), no-repeat;
+  width: 29px;
+  background-size: cover;
+}
+
+.facebook {
+  background: url("./img/Fb.svg"), no-repeat;
+  background-size: cover;
+}
+
+.tiktok:hover,
+.tiktok:focus {
+  background: url("./img/tiktok-hover.svg");
+  background-size: cover;
+}
+
+.facebook:hover,
+.facebook:focus {
+  background: url("./img/fb-hover.svg");
+  background-size: cover;
+}
+
+.insta:hover,
+.insta:focus {
+  background: url("./img/insta-hover.svg");
+  background-size: cover;
+}
+
+@media (min-width:1201px) {
+  .footer {
+    height: 220px;
+  }
+
+  .footer__contact {
+    font-size: 24px;
+  }
+
+  .footer__links-logo {
+    width: 88.389px;
+    height: 88.389px;
+  }
+
+  .insta {
+    width: 91.545px;
+  }
+
+}
