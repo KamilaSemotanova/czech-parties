@@ -7,14 +7,14 @@ export const Sponsors = () => {
       <h2 className="sponsors__title">Sponzoři</h2>
       <div className="sponsors__logo">
         <img
-          src={require('./img/logo-bigshock-transparent 1.png')}
-          alt="bigshock-logo"
-          className="sponsor1__logo"
-        />
-        <img
           src={require('./img/Lost mary czech - Logotype_black 1.png')}
           alt="lostmary-logo"
           className="sponsor2__logo"
+        />
+        <img
+          src={require('./img/logo-bigshock-transparent 1.png')}
+          alt="bigshock-logo"
+          className="sponsor1__logo"
         />
       </div>
     </section>

@@ -35,7 +35,11 @@
   flex-shrink: 0;
 }
 
-@media (min-width: 840px) {
+@media (min-width: 769px) {
+  .sponsors__title {
+    font-size: 48px;
+  }
+
   .sponsor1__logo {
     height: 148px;
     ;
@@ -43,5 +47,12 @@
 
   .sponsor2__logo {
     height: 54px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .sponsors__title {
+    font-size: 56px;
+    margin-bottom: 2rem;
   }
 }
