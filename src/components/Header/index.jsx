@@ -41,30 +41,30 @@ export const Header = () => {
         </button>
         <div className="menu__pc">
           <ul className="menu__list">
-            <li className="menu__item">
+            <li className="menu__item"><div className='menu__item-hover'>
               <Link to="#akce" className="menu__item-link">
                 Akce
-              </Link>
+              </Link></div>
             </li>
-            <li className="menu__item">
+            <li className="menu__item"><div className='menu__item-hover'>
               <Link to="#galerie" className="menu__item-link">
                 Galerie
-              </Link>
+              </Link></div>
             </li>
-            <li className="menu__item">
+            <li className="menu__item"><div className='menu__item-hover'>
               <Link to="#o-nas" className="menu__item-link">
                 O nás
-              </Link>
+              </Link></div>
             </li>
-            <li className="menu__item">
+            <li className="menu__item"><div className='menu__item-hover'>
               <Link to="#aftermovies" className="menu__item-link">
                 Aftermovies
-              </Link>
+              </Link></div>
             </li>
-            <li className="menu__item">
+            <li className="menu__item"><div className='menu__item-hover'>
               <Link to="#kontakt" className="menu__item-link">
                 Kontakt
-              </Link>
+              </Link></div>
             </li>
           </ul>
         </div>
@@ -72,30 +72,31 @@ export const Header = () => {
       {menuOpen && (
         <div className="menu__phone-hamburger">
           <ul className="menu__list">
-            <li className="menu__item border">
-              <Link to="#akce" className="menu__item-link phone border">
+            <li className="menu__item border phone"><div className='menu__item-hover'>
+              <Link to="#akce" className="menu__item-link">
                 Akce
-              </Link>
+              </Link></div>
             </li>
-            <li className="menu__item border">
-              <Link to="#galerie" className="menu__item-link phone border">
+            <li className="menu__item border phone"><div className='menu__item-hover'>
+              <Link to="#galerie" className="menu__item-link">
                 Galerie
-              </Link>
+              </Link></div>
             </li>
-            <li className="menu__item border">
-              <Link to="#o-nas" className="menu__item-link phone border">
+            <li className="menu__item border phone"><div className='menu__item-hover'>
+              <Link to="#o-nas" className="menu__item-link">
                 O nás
-              </Link>
+              </Link></div>
             </li>
-            <li className="menu__item border">
-              <Link to="#aftermovies" className="menu__item-link phone">
+            <li className="menu__item border phone">
+              <div className='menu__item-hover'>
+              <Link to="#aftermovies" className="menu__item-link">
                 Aftermovies
-              </Link>
+              </Link></div>
             </li>
-            <li className="menu__item">
-              <Link to="#kontakt" className="menu__item-link phone">
+            <li className="menu__item phone"><div className='menu__item-hover'>
+              <Link to="#kontakt" className="menu__item-link">
                 Kontakt
-              </Link>
+              </Link></div>
             </li>
           </ul>
         </div>
