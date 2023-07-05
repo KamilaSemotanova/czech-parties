@@ -8,6 +8,7 @@ import { Footer } from './components/Footer';
 import { HomePage } from './pages/Home';
 import { Outlet } from 'react-router-dom';
 import { Detail } from './pages/Home/Detail';
+import { ErrorPage } from './pages/Error';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',
