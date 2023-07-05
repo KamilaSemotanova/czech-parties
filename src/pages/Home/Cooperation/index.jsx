@@ -5,11 +5,11 @@ export const Cooperation = () => {
   const [currentIndex, setCurrentIndex] = useState(0); // State to track the current index of the displayed images
 
   const images = [
-    require('./img/bigshock.png'),
-    require('./img/lostmary.png'),
-    require('./img/bigshock.png'),
-    require('./img/lostmary.png'),
-    require('./img/bigshock.png'),
+    require('./img/letni_parket.jpg'),
+    require('./img/loud_summer.png'),
+    require('./img/lucerna.jpg'),
+    require('./img/roxy_logo.jpg'),
+    require('./img/mad_logo.png'),
     require('./img/lostmary.png'),
     require('./img/bigshock.png'),
     require('./img/lostmary.png'),
@@ -30,22 +30,30 @@ export const Cooperation = () => {
   return (
     <section className="cooperation">
       <h2 className="cooperation__title">Spolupracujeme s</h2>
-      <div className="slider">
-        <button className="arrow prev" onClick={prevSlide}>
-          &lt;
+      <div className="cooperation__box">
+        <button className="cooperation__arrow prev" onClick={prevSlide}>
+          <img
+            src={require('./img/previous.svg')}
+            alt="previous image"
+            className="arrow"
+          />
         </button>
-        <div className="slide-container">
+        <div className="cooperation__container">
           {images.slice(currentIndex, currentIndex + 4).map((image, index) => (
             <img
               key={index}
               src={image}
               alt={`Image ${index + 1}`}
-              className="slide"
+              className="cooperation__logo"
             />
           ))}
         </div>
-        <button className="arrow next" onClick={nextSlide}>
-          &gt;
+        <button className="cooperation__arrow next" onClick={nextSlide}>
+          <img
+            src={require('./img/next.svg')}
+            alt="next image"
+            className="arrow"
+          />
         </button>
       </div>
     </section>
