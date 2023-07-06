@@ -2,13 +2,21 @@ import React, { useState } from 'react';
 import './style.css';
 
 export const Gallery = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(4);
+
+  const handleClick = (event) => {
+    event.preventDefault();
+    location.href = 'https://www.facebook.com/czechparties/photos';
+  };
 
   return (
     <section className="gallery" id="galerie">
       <h2 className="gallery__title">Galerie</h2>
       <div className="gallery__box">
-        <button>Všechny fotky</button>
+        <button className="gallery__more-top" onClick={handleClick}>
+          Všechny fotky
+        </button>
+
         <div className="gallery__container">
           <img
             src={require('./img/img_1.png')}
@@ -130,7 +138,16 @@ export const Gallery = () => {
             }}
           ></button>
         </div>
-        <button>Všechny fotky</button>
+        <button
+          className="gallery__more-bottom"
+          onClick={(event) => {
+            event.preventDefault()(
+              (location.href = 'https://www.facebook.com/czechparties/photos'),
+            );
+          }}
+        >
+          Všechny fotky
+        </button>
       </div>
     </section>
   );
