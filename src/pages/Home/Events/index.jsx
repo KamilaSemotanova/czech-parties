@@ -18,10 +18,7 @@ export const Events = () => {
           <div className="events__box">
             {events.map((event) => (
               <Link to={`event/${event.id}`} key={event.id}>
-                <div></div>
-                <button
-                  className="event"
-                >
+                <button className="event">
                   <h3 className="event__city">{event.city_event}</h3>
                   <p className="event__date">{event.date_of_event}</p>
                 </button>

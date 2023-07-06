@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './style.css';
 
 export const Cooperation = () => {
-  const [currentIndex, setCurrentIndex] = useState(0); // State to track the current index of the displayed images
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
     require('./img/letni_parket.jpg'),
