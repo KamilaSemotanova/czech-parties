@@ -41,6 +41,11 @@
   display: none;
 }
 
+.gallery__more-top:hover {
+  background-color: #121212;
+  cursor: pointer;
+}
+
 .gallery__box {
   display: flex;
   flex-direction: column;
@@ -90,6 +95,7 @@
 
 .gallery__dot:hover {
   border: 2px solid #740DF9;
+  cursor: pointer;
 }
 
 .active {
@@ -169,6 +175,11 @@
     background-color: #740DF9;
     margin: 20px 0;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .gallery__more-bottom:hover {
+    background-color: #121212;
+    cursor: pointer;
   }
 }
 
