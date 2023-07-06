@@ -138,14 +138,7 @@ export const Gallery = () => {
             }}
           ></button>
         </div>
-        <button
-          className="gallery__more-bottom"
-          onClick={(event) => {
-            event.preventDefault()(
-              (location.href = 'https://www.facebook.com/czechparties/photos'),
-            );
-          }}
-        >
+        <button className="gallery__more-bottom" onClick={handleClick}>
           Všechny fotky
         </button>
       </div>
