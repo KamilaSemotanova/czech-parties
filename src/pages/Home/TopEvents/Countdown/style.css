@@ -1,0 +1,18 @@
+.hidden {
+  display: none;
+}
+
+.rapresent__btn-countdown {
+  display: flex;
+  padding: 5px 30px;
+  align-items: flex-start;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.80);
+  width: 12rem;
+  color: #121212;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
