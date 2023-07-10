@@ -118,16 +118,18 @@ export const Detail = () => {
           Získej slevu
         </button>
       </div>
-      {wantSale && <SaleForm submit={handleClick} />}
+      {wantSale && (
+        <SaleForm submit={handleClick} discountUrl={event.discount_url} />
+      )}
       <div className="detail__info">
         <div>
           <h2 className="detail__info-title">{event.name_of_event}</h2>
           <p className="detail__info-text">{event.description_of_event}</p>
         </div>
         <div className="detail__info-widget">
-          <div className="sales-widget" data-config-property="WIDGET_CONFIG">
+          {/* <div className="sales-widget" data-config-property="WIDGET_CONFIG">
             widget
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

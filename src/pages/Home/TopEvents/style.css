@@ -14,7 +14,7 @@
   width: 80vw;
   background-size: cover;
   height: 470px;
-  border-radius: 30px;
+  border-top-right-radius: 30px;
   clip-path: polygon(100% 0%, 0% 0%, 100% 100%);
   -webkit-clip-path: polygon(100% 0%, 0% 0%, 100% 100%);
   position: absolute;
@@ -48,7 +48,7 @@
   background-size: cover;
   height: 470px;
   overflow: hidden;
-  border-radius: 30px;
+  border-bottom-left-radius: 30px;
   clip-path: polygon(100% 100%, 0% 0%, 0% 100%);
   -webkit-clip-path: polygon(100% 100%, 0% 0%, 0% 100%);
   position: absolute;
