@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import './style.css';
 import { LoadEventById } from '../../../functions/db';
 import { useParams } from 'react-router-dom';
+import { SaleForm } from './SaleForm';
 
 export const Detail = () => {
   const [event, setEvent] = useState([]);
+  const [wantSale, setWantSale] = useState(false);
 
   const { id } = useParams();
 
@@ -94,6 +96,11 @@ export const Detail = () => {
   //   };
   // }, []);
 
+  const handleClick = (event) => {
+    event.preventDefault();
+    setWantSale(!wantSale);
+  };
+
   return (
     <section className="detail">
       <div
@@ -107,8 +114,11 @@ export const Detail = () => {
       >
         <h1 className="detail__header-city">{event.city_event}</h1>
         <p className="detail__header-date">{event.date_of_event}</p>
-        <button className="detail__header-btn">Získej slevu</button>
+        <button className="detail__header-btn" onClick={handleClick}>
+          Získej slevu
+        </button>
       </div>
+      {wantSale && <SaleForm submit={handleClick} />}
       <div className="detail__info">
         <div>
           <h2 className="detail__info-title">{event.name_of_event}</h2>
