@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './style.css';
 
-export const Gallery = () => {
+const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(4);
 
   const handleClick = (event) => {
