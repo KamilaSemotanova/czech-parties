@@ -1,45 +1,34 @@
 import React, { useState, useRef } from 'react';
-import './style.css';
+import '../style.css';
 
 export const GalleryCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const imageContainerRef = useRef(null);
 
   const images = [
-    require('./img/img_1.png'),
-    require('./img/img_2.png'),
-    require('./img/img_3.png'),
-    require('./img/img_1.png'),
-    require('./img/img_2.png'),
-    require('./img/img_3.png'),
-    require('./img/img_1.png'),
-    require('./img/img_2.png'),
-    require('./img/img_3.png'),
-    require('./img/img_1.png'),
-    require('./img/img_2.png'),
-    require('./img/img_3.png'),
+    require('../img/img_1.png'),
+    require('../img/img_2.png'),
+    require('../img/img_3.png'),
+    require('../img/img_1.png'),
+    require('../img/img_2.png'),
+    require('../img/img_3.png'),
+    require('../img/img_1.png'),
+    require('../img/img_2.png'),
+    require('../img/img_3.png'),
+    require('../img/img_1.png'),
+    require('../img/img_2.png'),
+    require('../img/img_3.png'),
   ];
 
   const handleDotClick = (index) => {
     setCurrentIndex(index);
   };
 
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1,
-    );
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1,
-    );
-  };
-
-  const handleScroll = () => {
+  const handleScroll = (event) => {
     if (imageContainerRef.current) {
       const scrollPosition = imageContainerRef.current.scrollLeft;
-      const imageWidth = imageContainerRef.current.offsetWidth;
+
+      const imageWidth = event.target.offsetWidth / 2;
       const index = Math.round(scrollPosition / imageWidth);
       setCurrentIndex(index);
     }
@@ -53,10 +42,7 @@ export const GalleryCarousel = () => {
           ref={imageContainerRef}
           onScroll={handleScroll}
         >
-          <div
-            className="images"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
+          <div className="images">
             {images.map((image, index) => (
               <img
                 key={index}
@@ -67,13 +53,11 @@ export const GalleryCarousel = () => {
                     ? 'gallery__image active'
                     : 'gallery__image'
                 }
+                onClick={() => handleDotClick(index)}
               />
             ))}
           </div>
         </div>
-        <button className="next" onClick={handleNext}>
-          Next
-        </button>
       </div>
       <div className="dots">
         {images.map((_, index) => (

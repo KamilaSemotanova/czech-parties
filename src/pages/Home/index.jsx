@@ -3,8 +3,7 @@ import './style.css';
 import { Sponsors } from './Sponsors';
 import { About } from './About';
 import { Events } from './Events';
-// import { Gallery } from "./Gallery"
-import { GalleryCarousel } from './Gallery/gallery';
+import { Gallery } from './Gallery';
 import { Cooperation } from './Cooperation';
 import { ImageSlider } from './ImageSlider';
 import { AfterMovies } from './AfterMovies';
@@ -16,7 +15,7 @@ export const HomePage = () => {
       <ImageSlider />
       <TopEvents />
       <Events />
-      <GalleryCarousel />
+      <Gallery />
       <Cooperation />
       <About />
       <AfterMovies />
