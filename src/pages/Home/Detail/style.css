@@ -85,4 +85,36 @@
   line-height: 24px;
 }
 
-.detail__info-widget {}
+.sales__widget {
+  max-width: 100%;
+  width: 700px;
+  margin: 0 auto;
+}
+
+
+.sales__widget>iframe {
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+  padding: 0;
+}
+
+.sales__widget-overlay {
+  height: 100vh;
+  width: 100vw;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 9000;
+  background-color: #000;
+}
+
+.sales__widget-body-overlay {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
