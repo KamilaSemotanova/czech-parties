@@ -19,64 +19,6 @@
   line-height: normal;
 }
 
-.cooperation__box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90vw;
-}
-
-.cooperation__container {
-  width: 75vw;
-  height: 123px;
-  display: flex;
-  justify-content: center space-between;
-  gap: 3%;
-  align-items: center;
-  align-self: stretch;
-  margin: 8px;
-}
-
-.cooperation__logo {
-  width: calc((65vw)/4);
-  flex-grow: 1;
-}
-
-.cooperation__arrow {
-  border: none;
-  background-color: white;
-  display: flex;
-  width: 16px;
-  height: 28px;
-  align-items: center;
-  gap: 10px;
-}
-
-.next {
-  margin-left: 10px;
-  background: url("./img/next.svg");
-  background-size: cover;
-}
-
-.next:hover {
-  background: url("./img/next-hover.svg");
-  background-size: cover;
-  cursor: pointer;
-}
-
-.prev {
-  margin-right: 10px;
-  background: url("./img/previous.svg");
-  background-size: cover;
-}
-
-.prev:hover {
-  background: url("./img/next-hover.svg");
-  transform: scaleX(-1);
-  background-size: cover;
-  cursor: pointer;
-}
-
 @media (min-width:769px) {
   .cooperation__title {
     font-size: 40px;
@@ -87,15 +29,6 @@
 @media (min-width:993px) {
   .cooperation__title {
     font-size: 48px;
-  }
-
-  .cooperation__arrow {
-    width: 34px;
-    height: 61px;
-  }
-
-  .cooperation__box {
-    margin: 15px 0;
   }
 }
 

@@ -1,0 +1,87 @@
+.cooperation__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+}
+
+.cooperation__container {
+  width: 75vw;
+  height: 123px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.cooperation__images {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.cooperation__images::-webkit-scrollbar {
+  display: none;
+}
+
+.cooperation__logo {
+  /* width: calc((75vw)/4); */
+  height: 33px;
+  margin: 10px;
+  flex-grow: 1;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.cooperation__logo:hover {
+  transform: scale(1.1);
+}
+
+.cooperation__arrow {
+  border: none;
+  background-color: white;
+  display: flex;
+  width: 16px;
+  height: 28px;
+  align-items: center;
+  gap: 10px;
+}
+
+.next {
+  margin-left: 10px;
+  background: url("./img/next.svg");
+  background-size: cover;
+}
+
+.next:hover {
+  background: url("./img/next-hover.svg");
+  background-size: cover;
+  cursor: pointer;
+}
+
+.prev {
+  margin-right: 10px;
+  background: url("./img/previous.svg");
+  background-size: cover;
+}
+
+.prev:hover {
+  background: url("./img/next-hover.svg");
+  transform: scaleX(-1);
+  background-size: cover;
+  cursor: pointer;
+}
+
+@media (min-width:993px) {
+  .cooperation__arrow {
+    width: 34px;
+    height: 61px;
+  }
+
+  .cooperation__box {
+    margin: 15px 0;
+  }
+}
