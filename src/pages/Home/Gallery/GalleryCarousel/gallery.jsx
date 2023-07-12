@@ -6,18 +6,18 @@ export const GalleryCarousel = () => {
   const imageContainerRef = useRef(null);
 
   const images = [
-    require('../img/img_1.png'),
-    require('../img/img_2.png'),
-    require('../img/img_3.png'),
-    require('../img/img_1.png'),
-    require('../img/img_2.png'),
-    require('../img/img_3.png'),
-    require('../img/img_1.png'),
-    require('../img/img_2.png'),
-    require('../img/img_3.png'),
-    require('../img/img_1.png'),
-    require('../img/img_2.png'),
-    require('../img/img_3.png'),
+    require('./img/img_1.png'),
+    require('./img/img_2.png'),
+    require('./img/img_3.png'),
+    require('./img/img_1.png'),
+    require('./img/img_2.png'),
+    require('./img/img_3.png'),
+    require('./img/img_1.png'),
+    require('./img/img_2.png'),
+    require('./img/img_3.png'),
+    require('./img/img_1.png'),
+    require('./img/img_2.png'),
+    require('./img/img_3.png'),
   ];
 
   const handleDotClick = (index) => {
