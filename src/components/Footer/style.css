@@ -58,6 +58,11 @@
   background-size: cover;
 }
 
+.youtube {
+  background: url("./img/youtube.svg"), no-repeat;
+  background-size: cover;
+}
+
 .tiktok:hover,
 .tiktok:focus {
   background: url("./img/tiktok-hover.svg");
@@ -73,6 +78,12 @@
 .insta:hover,
 .insta:focus {
   background: url("./img/insta-hover.svg");
+  background-size: cover;
+}
+
+.youtube:hover,
+.youtube:focus {
+  background: url("./img/youtube-hover.svg");
   background-size: cover;
 }
 
