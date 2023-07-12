@@ -11,8 +11,17 @@ export const Detail = () => {
 
   const { id } = useParams();
 
-  const containerForWidget = useRef();
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    const formattedDate = date.toLocaleDateString('en-GB');
 
+    return formattedDate;
+  }
+
+  const originalDate = event.date_of_event;
+  const formattedDate = formatDate(originalDate);
+
+  const containerForWidget = useRef();
   const internalId = 24;
 
   useEffect(() => {
@@ -58,7 +67,7 @@ export const Detail = () => {
         }}
       >
         <h1 className="detail__header-city">{event.city_event}</h1>
-        <p className="detail__header-date">{event.date_of_event}</p>
+        <p className="detail__header-date">{formattedDate}</p>
         <button className="detail__header-btn" onClick={handleClick}>
           Získej slevu
         </button>
