@@ -18,6 +18,13 @@ export const Events = () => {
     require('./img/img_3.png'),
   ];
 
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    const formattedDate = date.toLocaleDateString('en-GB');
+
+    return formattedDate;
+  }
+
   useEffect(() => {
     LoadEvents().then((events) => setEvents(events));
   }, []);
@@ -28,30 +35,32 @@ export const Events = () => {
         <>
           <h2 className="events__title">Kalendář akcí</h2>
           <div className="events__box">
-            {events.map((event, index) => (
-              <Link
-                to={`event/${event.id}`}
-                key={event.id}
-                className="event__link"
-              >
-                <button
-                  className="event"
-                  style={{
-                    backgroundImage: `url(${images[index]})`,
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundSize: 'cover',
-                  }}
+            {events.map((event, index) => {
+              const originalDate = event.date_of_event;
+              const formattedDate = formatDate(originalDate);
+              return (
+                <Link
+                  to={`event/${event.id}`}
+                  key={event.id}
+                  className="event__link"
                 >
-                  <div className="event-hover">
-                    <h3 className="event__city">{event.city_event}</h3>
-                    <p className="event__date">
-                      {event.date_of_event}
-                    </p>
-                  </div>
-                </button>
-              </Link>
-            ))}
+                  <button
+                    className="event"
+                    style={{
+                      backgroundImage: `url(${images[index]})`,
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat',
+                      backgroundSize: 'cover',
+                    }}
+                  >
+                    <div className="event-hover">
+                      <h3 className="event__city">{event.city_event}</h3>
+                      <p className="event__date">{formattedDate}</p>
+                    </div>
+                  </button>
+                </Link>
+              );
+            })}
           </div>
         </>
       )}
