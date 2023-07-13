@@ -24,10 +24,40 @@ export const SaleForm = ({ submit, discountUrl }) => {
       });
   };
 
+  const message = () => {
+    let account = document.getElementById('account');
+    const success = document.getElementById('success');
+    const danger = document.getElementById('danger');
+
+    if (account.value === '') {
+      danger.style.display = 'block';
+    } else {
+      setTimeout(() => {
+        account.value = '';
+      }, 2000);
+
+      setTimeout(() => {
+        submit(false);
+      }, 2500);
+
+      SaveAccount(inputValue);
+
+      success.style.display = 'block';
+    }
+
+    setTimeout(() => {
+      danger.style.display = 'none';
+      success.style.display = 'none';
+    }, 4000);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    SaveAccount(inputValue);
     setInputValue('');
+  };
+
+  const handleClick = (event) => {
+    event.preventDefault();
     submit(false);
   };
 
@@ -45,12 +75,13 @@ export const SaleForm = ({ submit, discountUrl }) => {
           <form onSubmit={handleSubmit} className="form">
             <input
               className="form__input"
+              id="account"
               type="text"
               value={inputValue}
               onChange={handleInputChange}
               placeholder="Instagram účet"
             />
-            <button type="submit" className="form__submit">
+            <button type="submit" className="form__submit" onClick={message}>
               Submit
             </button>
           </form>
@@ -58,7 +89,7 @@ export const SaleForm = ({ submit, discountUrl }) => {
             Download
           </button>
         </div>
-        <button className="form__close" onClick={handleSubmit}>
+        <button className="form__close" onClick={handleClick}>
           Zavřít
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -76,6 +107,14 @@ export const SaleForm = ({ submit, discountUrl }) => {
             />
           </svg>
         </button>
+      </div>
+      <div className="message">
+        <div className="success" id="success">
+          Odesláno 🎉
+        </div>
+        <div className="danger" id="danger">
+          Pole nesmí být prázdné!
+        </div>
       </div>
     </div>
   );
