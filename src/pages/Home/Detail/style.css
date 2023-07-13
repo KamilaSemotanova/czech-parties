@@ -10,7 +10,7 @@
   flex-direction: column;
   width: 100%;
   height: 289px;
-  padding: 30px 16px;
+  padding: 30px 25px;
   justify-content: flex-end;
   align-items: flex-start;
   align-self: stretch;
@@ -46,6 +46,7 @@
   font-style: normal;
   font-weight: 800;
   line-height: normal;
+  text-transform: uppercase;
 }
 
 .detail__header-btn:hover {
@@ -59,8 +60,14 @@
 }
 
 .detail__info {
+  width: 100vw;
+  padding: 0 25px;
+}
+
+.detail__box {
   display: flex;
-  padding: 24px 16px;
+  padding: 24px 0;
+  width: 100vw;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
@@ -74,6 +81,7 @@
   font-style: normal;
   font-weight: 800;
   line-height: normal;
+  margin-bottom: 13px;
 }
 
 .detail__info-text {
@@ -87,7 +95,7 @@
 
 .sales__widget {
   max-width: 100%;
-  width: 700px;
+  width: 100vw;
   margin: 0 auto;
 }
 
@@ -117,4 +125,122 @@
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+}
+
+@media (min-width:769px) {
+  .detail__header {
+    padding: 40px 40px;
+    height: 307px;
+  }
+
+  .detail__info {
+    padding: 0 40px;
+  }
+
+  .detail__info-text,
+  .detail__info-title {
+    font-size: 20px;
+  }
+
+  .detail__header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .detail__header-city {
+    font-size: 40px;
+  }
+
+  .detail__header-btn {
+    font-size: 20px;
+  }
+}
+
+@media (min-width:993px) {
+  .detail__header {
+    padding: 48px 48px;
+    height: 559px;
+  }
+
+  .detail__info {
+    padding: 0 48px;
+  }
+
+  .detail__info-text,
+  .detail__info-title {
+    font-size: 20px;
+  }
+
+  .detail__header-city {
+    font-size: 64px;
+  }
+
+  .detail__header-date {
+    font-size: 35px;
+  }
+
+  .detail__header-btn {
+    font-size: 24px;
+  }
+}
+
+@media (min-width:1201px) {
+  .detail__header {
+    padding: 80px 80px;
+    ;
+  }
+
+  .detail__header-btn {
+    font-size: 32px;
+  }
+
+  .detail__info {
+    padding: 48px 80px;
+    display: flex;
+    gap: 48px;
+  }
+
+  .detail__info-text,
+  .detail__info-title {
+    font-size: 24px;
+  }
+
+  .detail__header-city {
+    font-size: 96px;
+  }
+
+  .detail__header-date {
+    font-size: 40px;
+  }
+}
+
+@media (min-width:1401px) {
+  .detail__header {
+    padding: 80px 100px;
+    ;
+  }
+
+  .detail__header-btn {
+    font-size: 40px;
+  }
+
+  .detail__info {
+    padding: 48px 100px;
+    display: flex;
+    gap: 48px;
+  }
+
+  .detail__info-text,
+  .detail__info-title {
+    font-size: 24px;
+  }
+
+  .detail__header-city {
+    font-size: 96px;
+  }
+
+  .detail__header-date {
+    font-size: 40px;
+  }
 }

@@ -32,13 +32,10 @@ export const Detail = () => {
   }, []);
 
   useEffect(() => {
-    console.log(boomId);
     if (boomId !== undefined) {
       const containerElement = containerForWidget.current;
-      console.log('ahoj');
 
       const eventUrl = `https://connect.boomevents.org/event/${boomId}/widget`;
-      console.log(eventUrl);
 
       window.BOOM_WIDGET_API.placeSalesWidget(
         containerElement,
@@ -69,8 +66,10 @@ export const Detail = () => {
           backgroundSize: 'cover',
         }}
       >
-        <h1 className="detail__header-city">{event.city_event}</h1>
-        <p className="detail__header-date">{formattedDate}</p>
+        <div className='detail__header-text'>
+          <h1 className="detail__header-city">{event.city_event}</h1>
+          <p className="detail__header-date">{formattedDate}</p>
+        </div>
         <button className="detail__header-btn" onClick={handleOpen}>
           Získej slevu
         </button>
@@ -79,7 +78,7 @@ export const Detail = () => {
         <SaleForm submit={handleClose} discountUrl={event.discount_url} />
       )}
       <div className="detail__info">
-        <div>
+        <div className="detail__box">
           <h2 className="detail__info-title">{event.name_of_event}</h2>
           <p className="detail__info-text">{event.description_of_event}</p>
         </div>
