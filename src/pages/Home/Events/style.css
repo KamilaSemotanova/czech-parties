@@ -24,7 +24,7 @@
   width: 90vw;
   gap: 5vw;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .event {
@@ -77,6 +77,7 @@
   font-style: normal;
   font-weight: 800;
   line-height: normal;
+  word-wrap: break-word;
 }
 
 .event__date {
@@ -120,6 +121,10 @@
     font-size: 48px;
   }
 
+  .events__box {
+    justify-content: space-between;
+  }
+
   .event {
     height: 206px;
     width: calc(80vw / 5);
@@ -130,9 +135,9 @@
     width: calc(80vw / 5);
   }
 
-  .event__city,
-  .event__date {
-    font-size: 32px;
+  .event__city {
+    max-width: calc(80vw / 5);
+    font-size: 28px;
   }
 }
 
@@ -149,9 +154,12 @@
     height: 232px;
   }
 
-  .event__city,
-  .event__date {
+  .event__city {
     font-size: 36px;
+  }
+
+  .event__date {
+    font-size: 30px;
   }
 }
 
@@ -164,8 +172,11 @@
     height: 250px;
   }
 
-  .event__city,
-  .event__date {
+  .event__city {
     font-size: 40px;
+  }
+
+  .event__date {
+    font-size: 35px;
   }
 }
