@@ -50,6 +50,7 @@
 }
 
 .detail__header-btn:hover {
+  cursor: pointer;
   background: #740DF9;
   display: -webkit-box;
   -webkit-box-orient: vertical;

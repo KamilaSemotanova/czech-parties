@@ -54,7 +54,6 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  cursor: pointer;
 }
 
 .menu__item-hover {
@@ -62,6 +61,7 @@
 }
 
 .menu__item-hover:hover {
+  cursor: pointer;
   transform: scale(1.05);
 }
 
@@ -95,6 +95,11 @@
 .menu__phone-btn--toggle {
   height: 1.8rem;
   margin-left: 2rem;
+}
+
+.menu__phone-btn,
+.menu__phone-btn--toggle {
+  cursor: pointer;
 }
 
 @media (min-width: 992px) {
