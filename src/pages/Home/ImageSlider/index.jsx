@@ -42,7 +42,7 @@ export const ImageSlider = () => {
   }, []);
 
   return (
-    <div className="slider">
+    <div className="slider" id="home">
       <img
         src={images[currentImage].src}
         className="slider__image"
