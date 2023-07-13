@@ -50,9 +50,12 @@ export const Detail = () => {
     }
   }, [boomId]);
 
-  const handleClick = (event) => {
-    event.preventDefault();
-    setWantDiscount(!wantDiscount);
+  const handleClose = (value) => {
+    setWantDiscount(value);
+  };
+
+  const handleOpen = () => {
+    setWantDiscount(true);
   };
 
   return (
@@ -68,12 +71,12 @@ export const Detail = () => {
       >
         <h1 className="detail__header-city">{event.city_event}</h1>
         <p className="detail__header-date">{formattedDate}</p>
-        <button className="detail__header-btn" onClick={handleClick}>
+        <button className="detail__header-btn" onClick={handleOpen}>
           Získej slevu
         </button>
       </div>
       {wantDiscount && (
-        <SaleForm submit={handleClick} discountUrl={event.discount_url} />
+        <SaleForm submit={handleClose} discountUrl={event.discount_url} />
       )}
       <div className="detail__info">
         <div>
