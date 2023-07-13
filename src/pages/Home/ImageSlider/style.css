@@ -1,3 +1,8 @@
+.slider {
+  display: flex;
+  align-items: center;
+}
+
 .slider__image {
   width: 100vw;
   height: 294px;
@@ -21,8 +26,8 @@
 .slider__text-more {
   position: absolute;
   left: 1rem;
-  top: 14rem;
-  width: 75vw;
+  top: 10rem;
+  width: 80vw;
   color: #FFF;
   font-family: "Inter", sans-serif;
   text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -38,22 +43,24 @@
 .first {
   position: absolute;
   left: 1rem;
-  top: 12rem;
+  top: 8rem;
   width: 100vw;
 }
 
 .second {
   position: absolute;
-  left: 1rem;
-  top: 14rem;
-  width: 60vw;
+  left: 10vw;
+  top: 9rem;
+  width: 80vw;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .third {
   position: absolute;
   left: 1rem;
-  top: 14rem;
+  top: 8rem;
+  width: 80vw;
 }
 
 @media (min-width:768px) {
