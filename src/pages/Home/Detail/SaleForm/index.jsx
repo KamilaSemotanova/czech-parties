@@ -62,14 +62,16 @@ export const SaleForm = ({ submit, discountUrl }) => {
   };
 
   return (
-    <div className="discount">
-      <h3 className="discount__title">Získej slevu:</h3>
-      <p className="discount__text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid iste,
-        sapiente maiores itaque sint mollitia provident, id cupiditate culpa,
-        iusto iure velit molestiae enim dignissimos quo deserunt nobis
-        voluptatem ut.
-      </p>
+    <section className="discount">
+      <div className='discount__info'>
+        <h3 className="discount__title">Získej slevu:</h3>
+        <p className="discount__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+          iste, sapiente maiores itaque sint mollitia provident, id cupiditate
+          culpa, iusto iure velit molestiae enim dignissimos quo deserunt nobis
+          voluptatem ut.
+        </p>
+      </div>
       <div className="discount__box">
         <div className="form__container">
           <form onSubmit={handleSubmit} className="form">
@@ -84,10 +86,10 @@ export const SaleForm = ({ submit, discountUrl }) => {
             <button type="submit" className="form__submit" onClick={message}>
               Submit
             </button>
+            <button onClick={handleDownload} className="form__download">
+              Download
+            </button>
           </form>
-          <button onClick={handleDownload} className="form__download">
-            Download
-          </button>
         </div>
         <button className="form__close" onClick={handleClick}>
           Zavřít
@@ -116,6 +118,6 @@ export const SaleForm = ({ submit, discountUrl }) => {
           Pole nesmí být prázdné!
         </div>
       </div>
-    </div>
+    </section>
   );
 };

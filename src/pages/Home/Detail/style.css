@@ -61,14 +61,14 @@
 }
 
 .detail__info {
-  width: 100vw;
+  width: 90vw;
   padding: 0 25px;
 }
 
 .detail__box {
   display: flex;
   padding: 24px 0;
-  width: 100vw;
+  width: 90vw;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
