@@ -288,3 +288,11 @@
     font-size: 24px;
   }
 }
+
+@media (min-width:1201px) {
+  .discount {
+    padding-top: 55px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
