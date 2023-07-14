@@ -63,7 +63,7 @@ export const SaleForm = ({ submit, discountUrl }) => {
 
   return (
     <section className="discount">
-      <div className='discount__info'>
+      <div className="discount__info">
         <h3 className="discount__title">Získej slevu:</h3>
         <p className="discount__text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
@@ -94,6 +94,7 @@ export const SaleForm = ({ submit, discountUrl }) => {
         <button className="form__close" onClick={handleClick}>
           Zavřít
           <svg
+            className='form__close-arrow'
             xmlns="http://www.w3.org/2000/svg"
             width="18"
             height="11"
