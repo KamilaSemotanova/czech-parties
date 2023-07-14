@@ -3,7 +3,9 @@
   width: 100vw;
   height: auto;
   display: flex;
-  padding: 24px 16px;
+  padding-top: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -54,7 +56,7 @@
 
 .form__input {
   width: calc(100vw - 32px);
-  height: 60px;
+  height: 50px;
   padding: 15px 20px;
   text-align: left;
   font-style: italic;
@@ -68,7 +70,7 @@
   text-align: start;
   font-family: "Inter";
   font-style: italic;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .form__submit {
@@ -83,7 +85,7 @@
 .form__download {
   padding: 15px 0;
   margin-top: 10px;
-  height: 60px;
+  height: 50px;
   width: calc((100vw - 42px) / 2);
   text-align: center;
   border: none;
@@ -99,14 +101,42 @@
   line-height: normal;
 }
 
-.form__close {
-  padding: 15px 20px;
-  border-radius: 16px;
+.form__submit:hover,
+.form__download:hover {
+  cursor: pointer;
+  background-color: #FFF;
+  color: #740DF9;
   border: 1px solid #740DF9;
-  background: #FFF;
+}
+
+.form__close {
+  display: flex;
+  padding: 15px 20px;
+  align-items: center;
+  gap: 10px;
+  background-color: #FFF;
+  border: 1px solid #740DF9;
+  border-radius: 16px;
   position: absolute;
   top: 27px;
-  right: 17px
+  right: 17px;
+  height: 50px;
+  color: #740DF9;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.form__close:hover {
+  cursor: pointer;
+  background-color: #740DF9;
+  color: #FFF;
+}
+
+.form__close:hover .form__close-arrow {
+  stroke: #FFF;
 }
 
 .form__close-arrow {
@@ -124,6 +154,7 @@
 .message .success {
   font-size: 20px;
   font-family: "Inter", sans-serif;
+  font-style: italic;
   color: green;
   position: absolute;
   animation: buttons .3s linear;
@@ -134,7 +165,7 @@
   font-size: 20px;
   color: red;
   font-family: "Inter", sans-serif;
-  position: absolute;
+  font-style: italic;
   transition: .3s;
   animation: buttons .3s linear;
   display: none;
@@ -158,6 +189,102 @@
 
   .discount__text,
   .discount__title {
+    font-size: 20px;
+  }
+
+  .discount {
+    padding-top: 26px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .form__input {
+    width: calc(100vw - 80px);
+    height: 60px;
+  }
+
+  .form__input::placeholder {
+    font-size: 20px;
+  }
+
+  .form__close {
+    right: 40px;
+    top: 30px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .form__submit,
+  .form__download {
+    width: calc((100vw - 90px) / 2);
+    height: 60px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width:993px) {
+  .discount {
+    padding-top: 28px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .discount__info {
+    width: 90vw;
+  }
+
+  .form__input {
+    width: 20vw;
+    margin-right: 10px;
+  }
+
+  .form__submit,
+  .form__download {
+    width: 15vw;
+    font-size: 24px;
+    margin-top: 0;
+  }
+
+  .form__close {
+    position: unset;
+    width: 140px;
+    height: 60px;
+    font-size: 24px;
+  }
+}
+
+@media (min-width:1201px) {
+  .discount {
+    padding-top: 45px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .discount__info {
+    font-size: 24px;
+  }
+
+  .form__input {
+    width: 20vw;
+    margin-right: 10px;
+  }
+
+  .form__input::placeholder {
+    font-size: 24px;
+  }
+
+  .form__submit,
+  .form__download {
+    width: 15vw;
+    font-size: 24px;
+    margin-top: 0;
+    font-size: 24px;
+  }
+
+  .form__close {
+    position: unset;
+    width: 140px;
+    height: 60px;
     font-size: 24px;
   }
 }

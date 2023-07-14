@@ -36,10 +36,6 @@ export const SaleForm = ({ submit, discountUrl }) => {
         account.value = '';
       }, 2000);
 
-      setTimeout(() => {
-        submit(false);
-      }, 2500);
-
       SaveAccount(inputValue);
 
       success.style.display = 'block';
@@ -94,7 +90,6 @@ export const SaleForm = ({ submit, discountUrl }) => {
         <button className="form__close" onClick={handleClick}>
           Zavřít
           <svg
-            className='form__close-arrow'
             xmlns="http://www.w3.org/2000/svg"
             width="18"
             height="11"
@@ -102,6 +97,7 @@ export const SaleForm = ({ submit, discountUrl }) => {
             fill="none"
           >
             <path
+              className="form__close-arrow"
               d="M2 9L9 2L16 9"
               stroke="#740DF9"
               strokeWidth="3"
