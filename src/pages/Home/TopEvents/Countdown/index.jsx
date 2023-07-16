@@ -38,14 +38,19 @@ export const CountdownButton = () => {
 
   return (
     <div>
-      <div
-        disabled={count.total > 0}
-        className={count.total <= 0 ? 'hidden' : 'rapresent__btn-countdown'}
-      >
-        {count.days} dnů {count.hours} hodin
+      <div className='raprezent__countdown'>
+        <p className={count.total <= 0 ? 'hidden' : 'raprezent__see'}>
+          Vidíme se za
+        </p>
+        <div
+          disabled={count.total > 0}
+          className={count.total <= 0 ? 'hidden' : 'rapresent__btn-countdown'}
+        >
+          {count.days} dnů {count.hours} hodin
+        </div>
       </div>
       <button className={count.total > 0 ? 'hidden' : 'rapresent__btn'}>
-        Jedu
+        Zjistit víc!
       </button>
     </div>
   );
