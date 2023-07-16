@@ -5,19 +5,19 @@ export const ImageSlider = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
   const images = [
-    {
-      src: require('./img/img_1.png'),
-      text: 'Vítejte v Czechparties',
-      more: 'organizaci, která se specializuje na nezapomenutelné párty pro studenty středních a vysokých škol!',
-      even_more:
-        'Jsme tady, abychom přinesli do vašeho studentského života dávku vzrušení, radosti a neomezené zábavy.',
-      class: 'first',
-    },
-    {
-      src: require('./img/img_3.png'),
-      text: 'We are the new generation',
-      class: 'second',
-    },
+    // {
+    //   src: require('./img/img_1.png'),
+    //   text: 'Vítejte v Czechparties',
+    //   more: 'organizaci, která se specializuje na nezapomenutelné párty pro studenty středních a vysokých škol!',
+    //   even_more:
+    //     'Jsme tady, abychom přinesli do vašeho studentského života dávku vzrušení, radosti a neomezené zábavy.',
+    //   class: 'first',
+    // },
+    // {
+    //   src: require('./img/img_3.png'),
+    //   text: 'We are the new generation',
+    //   class: 'second',
+    // },
     {
       src: require('./img/img_2.png'),
       text: 'Katalyzátor nekonečné zábavy pro studentskou scénu!',
