@@ -42,6 +42,7 @@
 }
 
 .rapresent__btn:hover {
+  cursor: pointer;
   background: #FFF;
   color: #740DF9;
 }
