@@ -17,11 +17,11 @@ export const TopEvents = () => {
           Jedu
         </button>
       </div>
-      <div className="rapresent__img"></div>
-      <div className="rapresent__box">
-        <h2>Rapresent</h2>
-        <p>Raprezent Lorem ipsum dolor sit amet</p>
-        <p>Vidíme se za</p>
+      <div className="raprezent__img"></div>
+      <div className="raprezent__box">
+        <h2 className="raprezent__title">Raprezent</h2>
+        <p className="raprezent__text">Lorem ipsum dolor sit amet</p>
+        <p className="raprezent__text">Vidíme se za</p>
         <CountdownButton />
       </div>
     </section>
