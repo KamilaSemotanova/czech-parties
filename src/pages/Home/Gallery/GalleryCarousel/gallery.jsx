@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import '../style.css';
+import './style.css';
 
 export const GalleryCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

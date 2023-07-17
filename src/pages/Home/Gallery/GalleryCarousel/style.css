@@ -1,0 +1,77 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100vw;
+  height: 20rem;
+}
+
+.image-container {
+  overflow: scroll;
+}
+
+.images {
+  display: flex;
+  padding: 0 6rem;
+}
+
+.gallery {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+}
+
+.image-container {
+  flex: 1;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.image-container::-webkit-scrollbar {
+  display: none;
+}
+
+.images {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.images img {
+  height: auto;
+  object-fit: cover;
+}
+
+.prev,
+.next {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dots span.active {
+  background-color: black;
+}
