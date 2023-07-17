@@ -17,7 +17,9 @@ export const Gallery = () => {
         <button className="gallery__more-top" onClick={handleClick}>
           Všechny fotky
         </button>
-        <GalleryCarousel />
+        <div className='gallery__carousel-box'>
+          <GalleryCarousel />
+        </div>
         <button className="gallery__more-bottom" onClick={handleClick}>
           Všechny fotky
         </button>

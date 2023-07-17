@@ -35,14 +35,14 @@ export const GalleryCarousel = () => {
   };
 
   return (
-    <div className="gallery">
-      <div className="carousel">
+    <div className="carousel">
+      <div className="carousel__box">
         <div
-          className="image-container"
+          className="carousel__image-container"
           ref={imageContainerRef}
           onScroll={handleScroll}
         >
-          <div className="images">
+          <div className="carousel__images">
             {images.map((image, index) => (
               <img
                 key={index}
@@ -50,8 +50,8 @@ export const GalleryCarousel = () => {
                 alt={`Image ${index + 1}`}
                 className={
                   index === currentIndex
-                    ? 'gallery__image active'
-                    : 'gallery__image'
+                    ? 'carousel__image active-image'
+                    : 'carousel__image'
                 }
                 onClick={() => handleDotClick(index)}
               />
@@ -59,11 +59,13 @@ export const GalleryCarousel = () => {
           </div>
         </div>
       </div>
-      <div className="dots">
+      <div className="carousel__dots">
         {images.map((_, index) => (
           <span
             key={index}
-            className={index === currentIndex ? 'active' : ''}
+            className={
+              index === currentIndex ? 'active-dot carousel__dot' : 'carousel__dot'
+            }
             onClick={() => handleDotClick(index)}
           ></span>
         ))}

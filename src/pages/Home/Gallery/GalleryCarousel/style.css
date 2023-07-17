@@ -1,31 +1,20 @@
-.gallery {
+.carousel {
   display: flex;
   flex-direction: column;
   position: relative;
   width: 100vw;
-  height: 20rem;
-}
-
-.image-container {
-  overflow: scroll;
-}
-
-.images {
-  display: flex;
-  padding: 0 6rem;
-}
-
-.gallery {
+  height: 10rem;
   max-width: 100%;
   overflow: hidden;
 }
 
-.carousel {
+.carousel__box {
   display: flex;
   align-items: center;
 }
 
-.image-container {
+.carousel__image-container {
+  overflow: scroll;
   flex: 1;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -33,45 +22,98 @@
   scrollbar-width: none;
 }
 
-.image-container::-webkit-scrollbar {
-  display: none;
-}
-
-.images {
+.carousel__images {
   display: flex;
+  padding: 0 6rem;
   flex-wrap: nowrap;
 }
 
-.images img {
-  height: auto;
+.carousel__image {
+  padding: 10px;
+  width: 202px;
+  height: 134px;
   object-fit: cover;
+  transition: transform 0.5s ease;
+  transform-origin: center center;
+  border-radius: 25px;
 }
 
-.prev,
-.next {
-  background: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-size: 16px;
+.carousel__image-container::-webkit-scrollbar {
+  display: none;
 }
 
-.dots {
+.carousel__dots {
   display: flex;
   justify-content: center;
   margin-top: 10px;
 }
 
-.dots span {
+.carousel__dot {
+  border: 2px solid #121212;
+  background-color: white;
   display: inline-block;
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: gray;
   margin: 0 5px;
+  cursor: pointer;
+  transform: scale(1.4);
+}
+
+.carousel__dot:hover {
+  border: 2px solid #740DF9;
   cursor: pointer;
 }
 
-.dots span.active {
-  background-color: black;
+.active-dot {
+  background-color: #121212;
+}
+
+/* .gallery__slide-control {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+} */
+
+
+.active-dot:hover {
+  border: 2px solid #121212;
+}
+
+@media (min-width:769px) {
+  .gallery__image {
+    width: 328px;
+    height: 218px;
+  }
+
+  .gallery__slide-control {
+    bottom: 12%;
+  }
+}
+
+@media (min-width:993px) {
+  .gallery__image {
+    width: 510px;
+    height: 339px;
+  }
+
+  .gallery__slide-control {
+    bottom: 12%;
+  }
+}
+
+@media (min-width:1201px) {
+
+  .gallery__image {
+    width: 510px;
+    height: 339px;
+  }
+
+  .gallery__slide-control {
+    bottom: 14%;
+  }
 }
