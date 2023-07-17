@@ -53,7 +53,6 @@ export const GalleryCarousel = () => {
                     ? 'carousel__image active-image'
                     : 'carousel__image'
                 }
-                onClick={() => handleDotClick(index)}
               />
             ))}
           </div>
@@ -64,9 +63,10 @@ export const GalleryCarousel = () => {
           <span
             key={index}
             className={
-              index === currentIndex ? 'active-dot carousel__dot' : 'carousel__dot'
+              index === currentIndex
+                ? 'active-dot carousel__dot'
+                : 'carousel__dot'
             }
-            onClick={() => handleDotClick(index)}
           ></span>
         ))}
       </div>
