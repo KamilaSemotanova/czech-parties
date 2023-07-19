@@ -20,18 +20,13 @@ export const GalleryCarousel = () => {
     require('./img/img_3.png'),
   ];
 
-  const handleDotClick = (index) => {
-    setCurrentIndex(index);
-  };
-
-  const handleScroll = (event) => {
+  const handleScroll = () => {
     if (imageContainerRef.current) {
       const scrollPosition = imageContainerRef.current.scrollLeft;
 
       const imageWidth =
         imageContainerRef.current.querySelector('.carousel__image').offsetWidth;
 
-      console.log(imageWidth);
       const index = Math.round(scrollPosition / imageWidth);
       setCurrentIndex(index);
     }
