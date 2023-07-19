@@ -123,6 +123,14 @@
   }
 
   .gallery__more-bottom {
-    bottom: 8%;
+    font-size: 26px;
+    bottom: 6%;
+  }
+}
+
+@media (min-width:1401px) {
+  .gallery__more-bottom {
+    font-size: 32px;
+    bottom: 5%;
   }
 }
