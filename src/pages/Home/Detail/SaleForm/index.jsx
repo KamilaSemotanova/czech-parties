@@ -80,10 +80,10 @@ export const SaleForm = ({ submit, discountUrl }) => {
               placeholder="Instagram účet"
             />
             <button type="submit" className="form__submit" onClick={message}>
-              Submit
+              Odeslat
             </button>
             <button onClick={handleDownload} className="form__download">
-              Download
+              Stáhnout
             </button>
           </form>
         </div>

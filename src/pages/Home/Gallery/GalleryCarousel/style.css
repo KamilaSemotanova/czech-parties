@@ -24,16 +24,16 @@
 
 .carousel__images {
   display: flex;
-  padding: 0 6rem;
+  padding: 0 25vw;
   flex-wrap: nowrap;
+  -webkit-padding-start: 25vw;
 }
 
 .carousel__image {
   padding: 10px;
-  width: 202px;
-  height: 134px;
+  width: 50vw;
+  height: auto;
   object-fit: cover;
-  transition: transform 0.5s ease;
   transform-origin: center center;
   border-radius: 25px;
 }

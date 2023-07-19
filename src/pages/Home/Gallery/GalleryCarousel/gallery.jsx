@@ -28,7 +28,10 @@ export const GalleryCarousel = () => {
     if (imageContainerRef.current) {
       const scrollPosition = imageContainerRef.current.scrollLeft;
 
-      const imageWidth = event.target.offsetWidth / 2;
+      const imageWidth =
+        imageContainerRef.current.querySelector('.carousel__image').offsetWidth;
+
+      console.log(imageWidth);
       const index = Math.round(scrollPosition / imageWidth);
       setCurrentIndex(index);
     }

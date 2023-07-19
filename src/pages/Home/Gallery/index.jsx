@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './style.css';
 import { GalleryCarousel } from './GalleryCarousel/gallery';
 
 export const Gallery = () => {
-  const [currentIndex, setCurrentIndex] = useState(4);
-
   const handleClick = (event) => {
     event.preventDefault();
     location.href = 'https://www.facebook.com/czechparties/photos';
@@ -17,7 +15,7 @@ export const Gallery = () => {
         <button className="gallery__more-top" onClick={handleClick}>
           Všechny fotky
         </button>
-        <div className='gallery__carousel-box'>
+        <div className="gallery__carousel-box">
           <GalleryCarousel />
         </div>
         <button className="gallery__more-bottom" onClick={handleClick}>
