@@ -53,8 +53,8 @@ export const GalleryCarousel = () => {
                 alt={`Image ${index + 1}`}
                 className={
                   index === currentIndex
-                    ? 'carousel__image active-image'
-                    : 'carousel__image'
+                    ? `carousel__image active-image image${index}`
+                    : `carousel__image image${index}`
                 }
               />
             ))}

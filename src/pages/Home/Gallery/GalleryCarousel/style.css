@@ -5,7 +5,7 @@
   width: 100vw;
   height: 10rem;
   max-width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .carousel__box {
@@ -14,7 +14,6 @@
 }
 
 .carousel__image-container {
-  overflow: scroll;
   flex: 1;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -23,7 +22,7 @@
 }
 
 .carousel__images {
-  display: flex;
+  display: inline-flex;
   padding: 0 25vw;
   flex-wrap: nowrap;
   -webkit-padding-start: 25vw;
