@@ -6,11 +6,15 @@ export const About = () => {
     <section className="about" id="o-nas">
       <h2 className="about__title">O nás</h2>
       <p className="about__text">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus
-        rhoncus. Nulla turpis magna, cursus sit amet, suscipit a, interdum id,
-        felis. Temporibus autem quibusdam et aut officiis debitis aut rerum
-        necessitatibus saepe eveniet ut et voluptates repudiandae sint et
-        molestiae non recusandae. Suspendisse sagittis ultrices augue.{' '}
+        S tímto projektem jsme začali v době Covidu. Všichni byli zavření doma,
+        kontakt s lidmi byl značně omezený, proto vznikla díra na trhu v podobě
+        studentských akcí, kam by se studenti společně s námi mohli chodit
+        bavit.
+        Začalo to v klubech v našich rodných městech, kdy jsme přišli s něčím
+        novým, a to lidi nadchlo. Postupem času jsme nabývali na zkušenostech a
+        zviditelnili si jméno, až to přešlo do fáze, kdy děláme akce po celé
+        České republice a spolupracujeme se spousty interprety a kluby. Zde ale
+        nekončíme a máme ještě velké plány..
       </p>
     </section>
   );
