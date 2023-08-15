@@ -5,19 +5,16 @@ export const Carousel = () => {
   const containerRef = useRef(null);
 
   const images = [
-    require('./img/letni_parket.jpg'),
     require('./img/loud_summer.png'),
     require('./img/lucerna.jpg'),
     require('./img/roxy_logo.jpg'),
     require('./img/mad_logo.png'),
-    require('./img/letni_parket.jpg'),
     require('./img/loud_summer.png'),
     require('./img/lucerna.jpg'),
     require('./img/roxy_logo.jpg'),
     require('./img/mad_logo.png'),
   ];
 
-  // console.log(images[5]);
   const prevSlide = () => {
     if (containerRef.current) {
       containerRef.current.scrollLeft -= 300;
