@@ -9,12 +9,13 @@ export const About = () => {
         S tímto projektem jsme začali v době Covidu. Všichni byli zavření doma,
         kontakt s lidmi byl značně omezený, proto vznikla díra na trhu v podobě
         studentských akcí, kam by se studenti společně s námi mohli chodit
-        bavit.
+        bavit. <br />
         Začalo to v klubech v našich rodných městech, kdy jsme přišli s něčím
-        novým, a to lidi nadchlo. Postupem času jsme nabývali na zkušenostech a
-        zviditelnili si jméno, až to přešlo do fáze, kdy děláme akce po celé
-        České republice a spolupracujeme se spousty interprety a kluby. Zde ale
-        nekončíme a máme ještě velké plány..
+        novým, a to lidi nadchlo. <br />
+        Postupem času jsme nabývali na zkušenostech a zviditelnili si jméno, až
+        to přešlo do fáze, kdy děláme akce po celé České republice a
+        spolupracujeme se spousty interprety a kluby. <br />
+        Zde ale nekončíme a máme ještě velké plány..
       </p>
     </section>
   );
