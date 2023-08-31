@@ -60,13 +60,13 @@ export const Detail = () => {
       <div
         className="detail__header"
         style={{
-          backgroundImage: `url(${event.column_photo})`,
+          backgroundImage: `url(${event.photo_of_event})`,
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
         }}
       >
-        <div className='detail__header-text'>
+        <div className="detail__header-text">
           <h1 className="detail__header-city">{event.city_event}</h1>
           <p className="detail__header-date">{formattedDate}</p>
         </div>

@@ -21,6 +21,4 @@ export async function SaveAccount(account) {
     console.error(error);
     return;
   }
-
-  console.log(data);
 }

@@ -103,7 +103,8 @@
   line-height: normal;
 }
 
-.zrce__btn:hover {
+.zrce__btn:hover,
+.raprezent__btn:hover {
   cursor: pointer;
   background: #FFF;
   color: #740DF9;
@@ -125,7 +126,8 @@
     font-size: 20px;
   }
 
-  .zrce__btn {
+  .zrce__btn,
+  .raprezent__btn {
     font-size: 20px;
   }
 }
@@ -166,7 +168,8 @@
     font-size: 24px;
   }
 
-  .zrce__btn {
+  .zrce__btn,
+  .raprezent__btn {
     font-size: 24px;
   }
 }

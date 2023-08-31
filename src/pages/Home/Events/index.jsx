@@ -47,7 +47,7 @@ export const Events = () => {
                   <button
                     className="event"
                     style={{
-                      backgroundImage: `url(${event.column_photo})`,
+                      backgroundImage: `url(${event.photo_of_event})`,
                       backgroundPosition: 'center',
                       backgroundRepeat: 'no-repeat',
                       backgroundSize: 'cover',
