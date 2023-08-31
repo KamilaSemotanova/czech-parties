@@ -15,7 +15,7 @@ export const Footer = () => {
         <a href="https://www.facebook.com/czechparties/">
           <div className="footer__links-logo facebook"></div>
         </a>
-        <a href="https://www.tiktok.com/discover/Czech-parties">
+        <a href="https://www.youtube.com/watch?v=rrcLss3FhJk&ab_channel=CzechParties">
           <div className="footer__links-logo youtube"></div>
         </a>
         <a href="https://www.tiktok.com/discover/Czech-parties">
