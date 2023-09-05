@@ -29,33 +29,37 @@ export const TopEvents = () => {
   }
 
   return (
-    <section className="top" id="top__events">
-      {event1 && (
-        <>
-          <div className="zrce__img"></div>
-          <div className="zrce__box">
-            <h2 className="zrce__title">{event1.name_of_event}</h2>
-            <p className="zrce__text">{formatDate(event1.date_of_event)}</p>
-            <Link to={`event/${event1.id}`} className="zrce__btn">
-              Koupit lístky
-            </Link>
-          </div>
-        </>
+    <>
+      {event1 && event2 && (
+        <section className="top" id="top__events">
+          {event1 && (
+            <>
+              <div className="zrce__img"></div>
+              <div className="zrce__box">
+                <h2 className="zrce__title">{event1.name_of_event}</h2>
+                <p className="zrce__text">{formatDate(event1.date_of_event)}</p>
+                <Link to={`event/${event1.id}`} className="zrce__btn">
+                  Koupit lístky
+                </Link>
+              </div>
+            </>
+          )}
+          {event2 && (
+            <>
+              <div className="raprezent__img"></div>
+              <div className="raprezent__box">
+                <h2 className="raprezent__title">{event2.name_of_event}</h2>
+                <p className="raprezent__text">
+                  {formatDate(event2.date_of_event)}
+                </p>
+                <Link to={`event/${event2.id}`} className="raprezent__btn">
+                  Koupit lístky
+                </Link>
+              </div>
+            </>
+          )}
+        </section>
       )}
-      {event2 && (
-        <>
-          <div className="raprezent__img"></div>
-          <div className="raprezent__box">
-            <h2 className="raprezent__title">{event2.name_of_event}</h2>
-            <p className="raprezent__text">
-              {formatDate(event2.date_of_event)}
-            </p>
-            <Link to={`event/${event2.id}`} className="raprezent__btn">
-              Koupit lístky
-            </Link>
-          </div>
-        </>
-      )}
-    </section>
+    </>
   );
 };

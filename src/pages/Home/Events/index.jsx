@@ -6,18 +6,6 @@ import { Link } from 'react-router-dom';
 export const Events = () => {
   const [events, setEvents] = useState(null);
 
-  const images = [
-    require('./img/img_1.png'),
-    require('./img/img_2.png'),
-    require('./img/img_3.png'),
-    require('./img/img_1.png'),
-    require('./img/img_2.png'),
-    require('./img/img_3.png'),
-    require('./img/img_1.png'),
-    require('./img/img_2.png'),
-    require('./img/img_3.png'),
-  ];
-
   function formatDate(dateString) {
     const date = new Date(dateString);
     const formattedDate = date.toLocaleDateString('en-GB');
