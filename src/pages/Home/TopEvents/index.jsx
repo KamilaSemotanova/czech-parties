@@ -30,7 +30,7 @@ export const TopEvents = () => {
 
   return (
     <>
-      {event1 && event2 && (
+      {event1 && event2 ? (
         <section className="top" id="top__events">
           {event1 && (
             <>
@@ -59,7 +59,7 @@ export const TopEvents = () => {
             </>
           )}
         </section>
-      )}
+      ) : (<section className='top--empty'></section>)}
     </>
   );
 };

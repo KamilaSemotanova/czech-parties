@@ -6,8 +6,12 @@
   padding: 24px 16px;
   margin: 1rem 0;
   width: 100vw;
-  height: fit-content;
+  height: 581px;
   position: relative;
+}
+
+.top--empty {
+  height: 0;
 }
 
 .zrce__box,
