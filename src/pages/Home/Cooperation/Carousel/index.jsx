@@ -1,18 +1,15 @@
-import React, { useRef } from 'react';
-import './style.css';
+import React, { useRef } from "react";
+import "./style.css";
 
 export const Carousel = () => {
   const containerRef = useRef(null);
 
   const images = [
-    require('./img/loud_summer.png'),
-    require('./img/lucerna.jpg'),
-    require('./img/roxy_logo.jpg'),
-    require('./img/mad_logo.png'),
-    require('./img/loud_summer.png'),
-    require('./img/lucerna.jpg'),
-    require('./img/roxy_logo.jpg'),
-    require('./img/mad_logo.png'),
+    require("./img/loud_summer.png"),
+    require("./img/lucerna.jpg"),
+    require("./img/roxy_logo.jpg"),
+    require("./img/mad_logo.png"),
+    require("./img/Luna.png"),
   ];
 
   const prevSlide = () => {
