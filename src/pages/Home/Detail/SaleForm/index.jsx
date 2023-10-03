@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { SaveAccount } from '../../../../functions/db';
-import './style.css';
+import React, { useState } from "react";
+import { SaveAccount } from "../../../../functions/db";
+import "./style.css";
 
 export const SaleForm = ({ submit, discountUrl }) => {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -13,43 +13,43 @@ export const SaleForm = ({ submit, discountUrl }) => {
     fetch(discountUrl)
       .then((response) => response.blob())
       .then((blob) => {
-        const downloadLink = document.createElement('a');
+        const downloadLink = document.createElement("a");
         downloadLink.href = URL.createObjectURL(blob);
-        downloadLink.download = 'czechparties.jpg';
+        downloadLink.download = "czechparties.jpg";
 
         downloadLink.click();
       })
       .catch((error) => {
-        console.error('Error downloading file:', error);
+        console.error("Error downloading file:", error);
       });
   };
 
   const message = () => {
-    let account = document.getElementById('account');
-    const success = document.getElementById('success');
-    const danger = document.getElementById('danger');
+    let account = document.getElementById("account");
+    const success = document.getElementById("success");
+    const danger = document.getElementById("danger");
 
-    if (account.value === '') {
-      danger.style.display = 'block';
+    if (account.value === "") {
+      danger.style.display = "block";
     } else {
       setTimeout(() => {
-        account.value = '';
+        account.value = "";
       }, 2000);
 
       SaveAccount(inputValue);
 
-      success.style.display = 'block';
+      success.style.display = "block";
     }
 
     setTimeout(() => {
-      danger.style.display = 'none';
-      success.style.display = 'none';
+      danger.style.display = "none";
+      success.style.display = "none";
     }, 4000);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setInputValue('');
+    setInputValue("");
   };
 
   const handleClick = (event) => {
@@ -62,10 +62,7 @@ export const SaleForm = ({ submit, discountUrl }) => {
       <div className="discount__info">
         <h3 className="discount__title">Získej slevu:</h3>
         <p className="discount__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          iste, sapiente maiores itaque sint mollitia provident, id cupiditate
-          culpa, iusto iure velit molestiae enim dignissimos quo deserunt nobis
-          voluptatem ut.
+          Zadej svůj instagram, stáhni si promo na akci a získej slevu.
         </p>
       </div>
       <div className="discount__box">
