@@ -5,14 +5,13 @@
   align-items: center;
   gap: 10px;
   align-self: stretch;
-  width: 100vw;
+  width: 100%;
 }
 
 .aftermovies__title {
   color: #121212;
   text-align: center;
   font-size: 32px;
-  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
@@ -31,14 +30,14 @@
 
 .aftermovies__box:hover,
 .aftermovies__box:focus {
-  background: url("./img/aftermovies-hover.svg"), lightgray 50% / cover no-repeat;
+  background: url("./img/aftermovies-hover.svg"),
+    lightgray 50% / cover no-repeat;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background-size: cover;
   background-position: center;
-  ;
 }
 
-@media (min-width:993px) {
+@media (min-width: 993px) {
   .aftermovies {
     gap: 50px;
     padding: 48px;
@@ -54,7 +53,7 @@
   }
 }
 
-@media (min-width:1201px) {
+@media (min-width: 1201px) {
   .aftermovies__title {
     font-size: 56px;
   }

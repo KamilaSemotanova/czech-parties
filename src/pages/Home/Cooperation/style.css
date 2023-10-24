@@ -1,5 +1,5 @@
 .cooperation {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,20 +19,19 @@
   line-height: normal;
 }
 
-@media (min-width:769px) {
+@media (min-width: 769px) {
   .cooperation__title {
     font-size: 40px;
   }
 }
 
-
-@media (min-width:993px) {
+@media (min-width: 993px) {
   .cooperation__title {
     font-size: 48px;
   }
 }
 
-@media (min-width:1201px) {
+@media (min-width: 1201px) {
   .cooperation__title {
     font-size: 56px;
   }

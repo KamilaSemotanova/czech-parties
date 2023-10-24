@@ -1,6 +1,6 @@
 .discount {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: auto;
   display: flex;
   padding-top: 24px;
@@ -18,8 +18,7 @@
 }
 
 .discount__title {
-  color: #740DF9;
-  font-family: "Inter";
+  color: #740df9;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -27,7 +26,6 @@
 }
 
 .discount__text {
-  font-family: "Inter";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -63,12 +61,11 @@
   font-size: 20px;
   flex-shrink: 0;
   border-radius: 16px;
-  border: 1px solid #740DF9;
+  border: 1px solid #740df9;
 }
 
 .form__input::placeholder {
   text-align: start;
-  font-family: "Inter";
   font-style: italic;
   font-size: 16px;
 }
@@ -90,11 +87,10 @@
   text-align: center;
   border: none;
   border-radius: 16px;
-  background: #740DF9;
+  background: #740df9;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  color: #FFF;
+  color: #fff;
   text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  font-family: "Inter";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -104,9 +100,9 @@
 .form__submit:hover,
 .form__download:hover {
   cursor: pointer;
-  background-color: #FFF;
-  color: #740DF9;
-  border: 1px solid #740DF9;
+  background-color: #fff;
+  color: #740df9;
+  border: 1px solid #740df9;
 }
 
 .form__close {
@@ -114,15 +110,14 @@
   padding: 15px 20px;
   align-items: center;
   gap: 10px;
-  background-color: #FFF;
-  border: 1px solid #740DF9;
+  background-color: #fff;
+  border: 1px solid #740df9;
   border-radius: 16px;
   position: absolute;
   top: 27px;
   right: 17px;
   height: 50px;
-  color: #740DF9;
-  font-family: "Inter", sans-serif;
+  color: #740df9;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -131,12 +126,12 @@
 
 .form__close:hover {
   cursor: pointer;
-  background-color: #740DF9;
-  color: #FFF;
+  background-color: #740df9;
+  color: #fff;
 }
 
 .form__close:hover .form__close-arrow {
-  stroke: #FFF;
+  stroke: #fff;
 }
 
 .form__close-arrow {
@@ -153,21 +148,19 @@
 
 .message .success {
   font-size: 20px;
-  font-family: "Inter", sans-serif;
   font-style: italic;
   color: green;
   position: absolute;
-  animation: buttons .3s linear;
+  animation: buttons 0.3s linear;
   display: none;
 }
 
 .message .danger {
   font-size: 20px;
   color: red;
-  font-family: "Inter", sans-serif;
   font-style: italic;
-  transition: .3s;
-  animation: buttons .3s linear;
+  transition: 0.3s;
+  animation: buttons 0.3s linear;
   display: none;
 }
 
@@ -185,8 +178,7 @@
   }
 }
 
-@media (min-width:769px) {
-
+@media (min-width: 769px) {
   .discount__text,
   .discount__title {
     font-size: 20px;
@@ -222,7 +214,7 @@
   }
 }
 
-@media (min-width:993px) {
+@media (min-width: 993px) {
   .discount {
     padding-top: 28px;
     padding-left: 48px;
@@ -253,7 +245,7 @@
   }
 }
 
-@media (min-width:1201px) {
+@media (min-width: 1201px) {
   .discount {
     padding-top: 45px;
     padding-left: 80px;
@@ -289,7 +281,7 @@
   }
 }
 
-@media (min-width:1201px) {
+@media (min-width: 1201px) {
   .discount {
     padding-top: 55px;
     padding-left: 100px;

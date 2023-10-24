@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
-import './style.css';
-import { LoadEventById } from '../../../functions/db';
-import { useParams } from 'react-router-dom';
-import { SaleForm } from './SaleForm';
+import React, { useEffect, useRef, useState } from "react";
+import "./style.css";
+import { LoadEventById } from "../../../functions/db";
+import { useParams } from "react-router-dom";
+import { SaleForm } from "./SaleForm";
 
 export const Detail = () => {
   const [event, setEvent] = useState([]);
@@ -13,7 +13,7 @@ export const Detail = () => {
 
   function formatDate(dateString) {
     const date = new Date(dateString);
-    const formattedDate = date.toLocaleDateString('en-GB');
+    const formattedDate = date.toLocaleDateString("en-GB");
 
     return formattedDate;
   }
@@ -42,7 +42,7 @@ export const Detail = () => {
         internalId,
         eventUrl,
         boomId,
-        [],
+        []
       );
     }
   }, [boomId]);
@@ -61,9 +61,9 @@ export const Detail = () => {
         className="detail__header"
         style={{
           backgroundImage: `url(${event.photo_of_event})`,
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
         }}
       >
         <div className="detail__header-text">
@@ -80,7 +80,13 @@ export const Detail = () => {
       <div className="detail__info">
         <div className="detail__box">
           <h2 className="detail__info-title">{event.name_of_event}</h2>
-          <p className="detail__info-text">{event.description_of_event}</p>
+          <p className="detail__info-text">{event.description_of_event_1}</p>
+          <p className="detail__info-text">{event.description_of_event_2}</p>
+          <p className="detail__info-text">{event.description_of_event_3}</p>
+          <p className="detail__info-text">{event.description_of_event_4}</p>
+          <p className="detail__info-text">{event.description_of_event_5}</p>
+          <p className="detail__info-text">{event.description_of_event_6}</p>
+          <p className="detail__info-text">{event.description_of_event_7}</p>
         </div>
         <div className="sales__widget" ref={containerForWidget}></div>
       </div>

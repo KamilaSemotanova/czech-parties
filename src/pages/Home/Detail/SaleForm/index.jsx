@@ -62,7 +62,11 @@ export const SaleForm = ({ submit, discountUrl }) => {
       <div className="discount__info">
         <h3 className="discount__title">Získej slevu:</h3>
         <p className="discount__text">
-          Zadej svůj instagram, stáhni si promo na akci a získej slevu.
+          Máš 500+ followers a chceš levnější vstup?
+        </p>
+        <p className="discount__text">
+          Zadej svůj instagram, sdílej příspěvěk na instagram stories a označ
+          @czechparteis.cz , u vstupu se prokážeš svým instagram účtem.
         </p>
       </div>
       <div className="discount__box">
