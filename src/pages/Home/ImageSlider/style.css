@@ -1,14 +1,85 @@
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  33% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  35% {
+    -webkit-transform: translateX(calc(-100% / 3));
+    transform: translateX(calc(-100% / 3));
+  }
+  68% {
+    -webkit-transform: translateX(calc(-100% / 3));
+    transform: translateX(calc(-100% / 3));
+  }
+  70% {
+    -webkit-transform: translateX(calc(2 * (-100% / 3)));
+    transform: translateX(calc(2 * (-100% / 3)));
+  }
+  100% {
+    -webkit-transform: translateX(calc(2 * (-100% / 3)));
+    transform: translateX(calc(2 * (-100% / 3)));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  33% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  35% {
+    -webkit-transform: translateX(calc(-100% / 3));
+    transform: translateX(calc(-100% / 3));
+  }
+  68% {
+    -webkit-transform: translateX(calc(-100% / 3));
+    transform: translateX(calc(-100% / 3));
+  }
+  70% {
+    -webkit-transform: translateX(calc(2 * (-100% / 3)));
+    transform: translateX(calc(2 * (-100% / 3)));
+  }
+  100% {
+    -webkit-transform: translateX(calc(2 * (-100% / 3)));
+    transform: translateX(calc(2 * (-100% / 3)));
+  }
+}
+
 .slider {
+  width: 100%;
+  height: 290px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider__images {
   display: flex;
+  width: 300%;
+  -webkit-animation: scroll 20s linear infinite;
+  animation: scroll 20s linear infinite;
+}
+
+.slider__slide {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .slider__image {
-  width: 100%;
-  height: 267px;
+  max-width: 100%;
+  height: 300px;
   object-fit: cover;
-  transition: opacity 0.8s ease;
-  object-position: left;
 }
 
 .slider__text {
@@ -37,6 +108,7 @@
   font-family: "Inter", sans-serif;
   text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   font-size: 16px;
+  text-align: left;
   padding: 1rem;
   z-index: 20;
 }
@@ -54,7 +126,7 @@
 
 .second {
   position: absolute;
-  left: 10vw;
+  left: 110vw;
   top: 9rem;
   width: 80vw;
   text-transform: uppercase;
@@ -63,14 +135,18 @@
 
 .third {
   position: absolute;
-  left: 0rem;
-  top: 7rem;
+  left: 202vw;
+  top: 9rem;
   width: 80vw;
 }
 
 @media (min-width: 768px) {
+  .slider {
+    height: 420px;
+  }
+
   .slider__image {
-    height: 478px;
+    height: 380px;
   }
 
   .slider__text {
@@ -80,8 +156,8 @@
 
   .slider__text-more {
     font-size: 24px;
-    top: 16rem;
-    left: 1rem;
+    top: 14rem;
+    left: 1vw;
     font-weight: 600;
     width: 90vw;
   }
@@ -89,10 +165,11 @@
   .slider__text-evenmore {
     display: flex;
     position: absolute;
-    left: 1rem;
-    top: 20rem;
+    left: 1vw;
+    top: 18rem;
     width: 90vw;
     color: #fff;
+    text-align: left;
     font-family: "Inter", sans-serif;
     text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     font-size: 18px;
@@ -101,7 +178,8 @@
   }
 
   .first {
-    top: 13rem;
+    left: 1vw;
+    top: 11rem;
   }
 
   .second,
@@ -110,19 +188,23 @@
   }
 
   .second {
-    left: 10vw;
+    left: 110vw;
     width: 80vw;
-    top: 16rem;
+    top: 17rem;
   }
 
   .third {
-    left: 13vw;
+    left: 214vw;
     width: 74vw;
-    top: 15rem;
+    top: 16rem;
   }
 }
 
 @media (min-width: 993px) {
+  .slider {
+    height: 560px;
+  }
+
   .slider__image {
     height: 533px;
   }
@@ -133,23 +215,67 @@
 
   .slider__text-more {
     font-size: 32px;
-    top: 18rem;
+    top: 19rem;
   }
 
   .slider__text-evenmore {
     font-size: 26px;
-    top: 23rem;
+    top: 25rem;
   }
 
   .first {
-    top: 14rem;
+    top: 15rem;
   }
 
   .second {
-    top: 18rem;
+    top: 20rem;
   }
 
   .third {
-    top: 17rem;
+    top: 19rem;
+  }
+}
+
+@media (min-width: 1201px) {
+  .slider {
+    height: 610px;
+  }
+
+  .slider__image {
+    height: 570px;
+  }
+}
+
+@media (min-width: 1401px) {
+  .slider {
+    height: 620px;
+  }
+
+  .slider__image {
+    height: 600px;
+  }
+  .slider__text-more {
+    font-size: 32px;
+    left: 3vw;
+    top: 19rem;
+  }
+
+  .slider__text-evenmore {
+    font-size: 26px;
+    left: 3vw;
+    top: 25rem;
+  }
+
+  .first {
+    left: 3vw;
+    top: 15rem;
+  }
+
+  .second {
+    top: 20rem;
+  }
+
+  .third {
+    top: 19rem;
   }
 }
