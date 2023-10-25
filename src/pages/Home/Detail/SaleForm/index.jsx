@@ -9,22 +9,8 @@ export const SaleForm = ({ submit, discountUrl }) => {
     setInputValue(event.target.value);
   };
 
-  const handleDownload = () => {
-    fetch(discountUrl)
-      .then((response) => response.blob())
-      .then((blob) => {
-        const downloadLink = document.createElement("a");
-        downloadLink.href = URL.createObjectURL(blob);
-        downloadLink.download = "czechparties.jpg";
-
-        downloadLink.click();
-      })
-      .catch((error) => {
-        console.error("Error downloading file:", error);
-      });
-  };
-
-  const message = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     let account = document.getElementById("account");
     const success = document.getElementById("success");
     const danger = document.getElementById("danger");
@@ -37,6 +23,7 @@ export const SaleForm = ({ submit, discountUrl }) => {
       }, 2000);
 
       SaveAccount(inputValue);
+      window.location.href = discountUrl;
 
       success.style.display = "block";
     }
@@ -45,10 +32,6 @@ export const SaleForm = ({ submit, discountUrl }) => {
       danger.style.display = "none";
       success.style.display = "none";
     }, 4000);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
     setInputValue("");
   };
 
@@ -80,11 +63,8 @@ export const SaleForm = ({ submit, discountUrl }) => {
               onChange={handleInputChange}
               placeholder="Instagram účet"
             />
-            <button type="submit" className="form__submit" onClick={message}>
+            <button type="submit" className="form__submit">
               Odeslat
-            </button>
-            <button onClick={handleDownload} className="form__download">
-              Stáhnout
             </button>
           </form>
         </div>

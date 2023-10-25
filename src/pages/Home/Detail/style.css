@@ -126,6 +126,9 @@
 @media (min-width: 769px) {
   .detail__header {
     padding: 40px 40px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
   }
 
   .detail__info {
@@ -135,12 +138,6 @@
   .detail__info-text,
   .detail__info-title {
     font-size: 20px;
-  }
-
-  .detail__header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: end;
   }
 
   .detail__header-city {
