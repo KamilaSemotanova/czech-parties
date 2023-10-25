@@ -4,10 +4,9 @@
   align-items: center;
   gap: 20px;
   padding: 2rem 0;
-  background: url("./img/about.png"),
-    lightgray -0.281px -156.766px / 186.371% 137.684% no-repeat;
+  background: url("./img/about.png") no-repeat;
   background-size: cover;
-  background-position: left;
+  background-position: center;
 }
 
 .about__title {

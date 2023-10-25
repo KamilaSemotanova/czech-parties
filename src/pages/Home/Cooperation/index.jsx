@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import "./style.css";
-import { Carousel } from "./Carousel";
 
 export const Cooperation = () => {
   return (
