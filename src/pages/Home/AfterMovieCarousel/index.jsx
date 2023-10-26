@@ -5,7 +5,7 @@ import YouTube from "react-youtube";
 export const AfterMovieCarousel = () => {
   const [videoToDisplay, setVideoToDisplay] = useState(null);
 
-  const videos = ["rrcLss3FhJk", "rrcLss3FhJk", "rrcLss3FhJk"];
+  const videos = ["rrcLss3FhJk"];
 
   const onVideoClick = (videoId) => {
     setVideoToDisplay(videoId);
@@ -13,6 +13,7 @@ export const AfterMovieCarousel = () => {
 
   return (
     <div className="video-carousel__box">
+      <h2 className="video-carousel__title">Aftermovies</h2>
       <div className="video-carousel">
         {videos.map((videoId) => (
           <div

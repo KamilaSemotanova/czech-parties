@@ -6,7 +6,6 @@ import { Events } from "./Events";
 import { Gallery } from "./Gallery";
 import { Cooperation } from "./Cooperation";
 import { ImageSlider } from "./ImageSlider";
-import { AfterMovies } from "./AfterMovies";
 import { TopEvents } from "./TopEvents";
 import { AfterMovieCarousel } from "./AfterMovieCarousel";
 
@@ -20,7 +19,6 @@ export const HomePage = () => {
       <Cooperation />
       <About />
       <AfterMovieCarousel />
-      <AfterMovies />
       <Sponsors />
     </div>
   );
