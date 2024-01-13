@@ -21,17 +21,14 @@
 
 .sponsors__logo {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
-.sponsor1__logo {
-  height: 54px;
-  flex-shrink: 0;
-}
-
-.sponsor2__logo {
-  height: 30px;
+.sponsor__logo {
+  width: 40%;
+  height: auto;
   flex-shrink: 0;
 }
 
@@ -39,27 +36,11 @@
   .sponsors__title {
     font-size: 48px;
   }
-
-  .sponsor1__logo {
-    height: 148px;
-  }
-
-  .sponsor2__logo {
-    height: 54px;
-  }
 }
 
 @media (min-width: 1201px) {
   .sponsors__title {
     font-size: 56px;
     margin-bottom: 2rem;
-  }
-
-  .sponsor1__logo {
-    height: 172px;
-  }
-
-  .sponsor2__logo {
-    height: 86px;
   }
 }
