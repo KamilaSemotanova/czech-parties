@@ -80,47 +80,13 @@ export const Detail = () => {
       <div className="detail__info">
         <div className="detail__box">
           <h2 className="detail__info-title">{event.name_of_event}</h2>
-          <p className="detail__info-text">
-            {/* {event.description_of_event_1} */}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis et tempora aliquid ratione nesciunt.
-          </p>
-          <p className="detail__info-text">
-            {event.description_of_event_2}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis et tempora aliquid ratione nesciunt. Repellendus quia
-            architecto omnis commodi, perspiciatis inventore autem, maiores,
-            distinctio voluptates modi reprehenderit in dolores tempora?
-          </p>
-          <p className="detail__info-text">
-            {event.description_of_event_3}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis et tempora aliquid ratione nesciunt. Repellendus quia
-            architecto omnis commodi, perspiciatis inventore autem, maiores.
-          </p>
-          <p className="detail__info-text">
-            {event.description_of_event_4}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
-          <p className="detail__info-text">
-            {event.description_of_event_5}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis et tempora aliquid ratione nesciunt.
-          </p>
-          <p className="detail__info-text">
-            {event.description_of_event_6}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis et tempora aliquid ratione nesciunt. Repellendus quia
-            architecto omnis commodi, perspiciatis inventore autem, maiores,
-            distinctio voluptates modi reprehenderit in dolores tempora?
-          </p>
-          <p className="detail__info-text">
-            {event.description_of_event_7}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis et tempora aliquid ratione nesciunt. Repellendus quia
-            architecto omnis commodi, perspiciatis inventore autem, maiores,
-            distinctio voluptates modi reprehenderit in dolores tempora?
-          </p>
+          <p className="detail__info-text">{event.description_of_event_1}</p>
+          <p className="detail__info-text">{event.description_of_event_2}</p>
+          <p className="detail__info-text">{event.description_of_event_3}</p>
+          <p className="detail__info-text">{event.description_of_event_4}</p>
+          <p className="detail__info-text">{event.description_of_event_5}</p>
+          <p className="detail__info-text">{event.description_of_event_6}</p>
+          <p className="detail__info-text">{event.description_of_event_7}</p>
         </div>
         <div className="sales__widget" ref={containerForWidget}></div>
       </div>
