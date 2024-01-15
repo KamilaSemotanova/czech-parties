@@ -1,12 +1,12 @@
 .sponsors {
   display: flex;
   width: 100%;
-  padding: 40px 100px 40px 100px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
   align-self: stretch;
+  margin-bottom: 2rem;
 }
 
 .sponsors__title {
@@ -27,9 +27,13 @@
 }
 
 .sponsor__logo {
-  width: 40%;
+  width: 60%;
   height: auto;
   flex-shrink: 0;
+
+  @media (min-width: 769px) {
+    width: 40%;
+  }
 }
 
 @media (min-width: 769px) {

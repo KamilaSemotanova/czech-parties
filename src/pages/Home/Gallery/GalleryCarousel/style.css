@@ -55,13 +55,14 @@
   height: 13px;
   border-radius: 50%;
   transform: scale(1.4);
+  cursor: pointer;
 }
 
 .active-dot {
   background-color: #121212;
 }
 
-@media (min-width:769px) {
+@media (min-width: 769px) {
   .gallery__slide-control {
     bottom: 12%;
   }
@@ -71,7 +72,7 @@
   }
 }
 
-@media (min-width:993px) {
+@media (min-width: 993px) {
   .carousel__dots {
     gap: 15px;
     margin-top: 35px;
@@ -88,7 +89,7 @@
   }
 }
 
-@media (min-width:1201px) {
+@media (min-width: 1201px) {
   .gallery__slide-control {
     bottom: 14%;
   }
@@ -102,7 +103,7 @@
   }
 }
 
-@media (min-width:1401px) {
+@media (min-width: 1401px) {
   .gallery__slide-control {
     bottom: 14%;
   }
